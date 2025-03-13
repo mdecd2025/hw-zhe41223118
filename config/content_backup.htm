@@ -16,6 +16,8 @@
 <p>除了每周上課內容任務外，小組作業個人製作部分，依序整理至此目錄下。</p><h2>w1</h2>
 <p><span>任務：</span></p>
 <p>分組團隊<span style="background-color: #ccffcc;"> (Teams)</span> 建立後，參考<a href="https://mde.tw/cd2025/content/list.html">說明</a>後，將各班各學員與各團隊的倉儲與網站連結，分別放入標題為 list <span style="background-color: #ccffcc;">(使用第一階標題)</span> 的網頁中。</p>
+<p></p>
+<p><span style="background-color: #ffff99;"><strong>甲乙班學員網站及倉儲整理</strong></span></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html, document
 
 # 讀取甲班資料
@@ -58,6 +60,7 @@ for i in all_stud:
     brython_div1 &lt;= html.BR()
 </pre>
 <p></p>
+<p><strong><span style="background-color: #ffff99;">甲乙兩班團隊網站及倉儲整理</span></strong></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import document, html
 
 # 顯示甲班標題
@@ -77,8 +80,7 @@ for i in range(num):
     brython_div1 &lt;= str(i+1) + ". " + html.A("g" + str(i+1), href="https://mdecd2025.github.io/2b-" + "g" + str(i+1))
     brython_div1 &lt;= " / " + html.A("repo", href="https://github.com/mdecd2025/2b-" + "g" + str(i+1))
     brython_div1 &lt;= html.BR()
-</pre>
-<p></p><h2>w3</h2><h1>tasks</h1>
+</pre><h2>w3</h2><h1>tasks</h1>
 <p><span>task1 與 task2 任務為建立可在<span style="background-color: #ffff00;">近端維護個人作業與協同作業</span>的前置準備工作：</span></p>
 <p><span><em><strong>1.</strong></em> </span>task1 (自行製作可攜程式系統)</p>
 <p><em><strong>2.</strong></em> task2 ( SSH 協定執行作業倉儲的推送)</p>
