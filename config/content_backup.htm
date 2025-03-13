@@ -69,7 +69,7 @@ brython_div1 &lt;= html.H3("甲班")  # 這行會顯示 "甲班" 標題
 
 num = 11
 for i in range(num):
-    brython_div1 &lt;= str(i+1) + ". " + html.A("ag" + str(i+1), href="https://mdecd2025.github.io/2a-" + "ag" + str(i+1))
+    brython_div1 &lt;= str(i+1) + ". " + html.A("2a-ag" + str(i+1), href="https://mdecd2025.github.io/2a-" + "ag" + str(i+1))
     brython_div1 &lt;= " / " + html.A("repo", href="https://github.com/mdecd2025/2a-" + "ag" + str(i+1))
     brython_div1 &lt;= html.BR()
 
@@ -77,10 +77,11 @@ for i in range(num):
 brython_div1 &lt;= html.H3("乙班")  # 這行會顯示 "乙班" 標題
 
 for i in range(num):
-    brython_div1 &lt;= str(i+1) + ". " + html.A("g" + str(i+1), href="https://mdecd2025.github.io/2b-" + "g" + str(i+1))
+    brython_div1 &lt;= str(i+1) + ". " + html.A("2b-g" + str(i+1), href="https://mdecd2025.github.io/2b-" + "g" + str(i+1))
     brython_div1 &lt;= " / " + html.A("repo", href="https://github.com/mdecd2025/2b-" + "g" + str(i+1))
     brython_div1 &lt;= html.BR()
-</pre><h2>w3</h2><h1>tasks</h1>
+</pre><h2>w3</h2>
+<p><span>列出各班目前尚未納入分組的學員名單。</span></p><h1>tasks</h1>
 <p><span>task1 與 task2 任務為建立可在<span style="background-color: #ffff00;">近端維護個人作業與協同作業</span>的前置準備工作：</span></p>
 <p><span><em><strong>1.</strong></em> </span>task1 (自行製作可攜程式系統)</p>
 <p><em><strong>2.</strong></em> task2 ( SSH 協定執行作業倉儲的推送)</p>
