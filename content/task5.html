@@ -143,7 +143,188 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">task4 << <a href='task4.html'>Previous</a> <a href='task6.html'>Next</a> >> task6<br /><h1>task5</h1>
-<br />task4 << <a href='task4.html'>Previous</a> <a href='task6.html'>Next</a> >> task6</div>
+<p><em><strong>1.</strong></em>請用繁體中文詳細說明下列資料:<span> </span><a href="https://cyberbotics.com/doc/guide/introduction-to-webots">https://cyberbotics.com/doc/guide/introduction-to-webots </a></p>
+<p></p>
+<p><strong><em>2.</em></strong>請整理<span> </span><a href="https://cyberbotics.com/doc/guide/introduction-to-webots">https://cyberbotics.com/doc/guide/introduction-to-webots</a><span> </span>中重要的英文單字與用法，並且針對其中所使用的英文文法逐句說明：</p>
+<p></p>
+<p><strong><em>3.</em></strong>請摘要出下列內容：(放入英文文章內容)</p>
+<p></p>
+<p><strong><em>4.</em></strong>請列出上述文章中的重要的英文單字與解釋，以及出現在文句中的用法：</p>
+<p></p>
+<p><strong><em>5.</em></strong>請詳細說明如何採手動方式在 Webots 建立下列場景：</p>
+<p></p>
+<p><strong><em>6.</em></strong>希望可以手把手一步步說明該如何利用<span style="background-color: #ffff00;">圖形介面</span> menu 建立這個場景，過程中有那些要點必須特別注意？</p>
+<div>
+<div>步驟 1：<strong>啟動 Webots 並創建新世界：</strong></div>
+</div>
+<div>
+<div>開啟 Webots 後，點擊菜單欄的「File」&gt;「New World」<span style="background-color: #ccffcc;"><span style="background-color: #ccffcc;">(Ctrl+N)-(</span></span>創建一個空白的仿真世界，檔案副檔名為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">.wbt)</span></div>
+<div>
+<div><span style="background-color: #ffff00;"><strong>要點</strong>：儲存時選擇一個容易找到的路徑，避免後續找不到檔案。</span></div>
+<div>
+<div>步驊 2：添加桌面（地面）</div>
+</div>
+</div>
+<div>
+<div>     1.在場景樹（Scene Tree，左側）中，右鍵點擊頂層節點（預設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">WorldInfo</span>），選擇「Add Node」</div>
+<div>     2.在節點選擇視窗中，展開「PROTO nodes (Webots Projects)」&gt;「objects」&gt;「floors」</div>
+</div>
+<div>     3.選擇 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">RectangleArena</span>，點擊「Add」</div>
+<div>     4.在場景樹中點擊 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">RectangleArena</span>，右側屬性面板調整：</div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">         (a.)size</span>：設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">1 0.5</span>（長 1m，寬 0.5m，模擬桌面大小）</div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">         (b.)translation</span>：設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0 0 0</span>（放在原點）</div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">         (c.)appearance</span>：點擊後選擇 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">PBRAppearance</span>，設置 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">baseColor</span> 為木頭色（如 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0.6 0.3 0.1</span>）</div>
+<div>
+<div><span style="background-color: #ffff00;"><strong>要點</strong>：確保地面有 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Physics</span> 節點（預設已有），以啟用物理互動</span></div>
+<div>
+<div>步驟 3：添加籃框</div>
+<div>
+<div>     1.在場景樹中右鍵，選擇「Add Node」</div>
+<div>
+<div>     2.選擇 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Base nodes</span> &gt; <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Solid</span>，命名為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">BasketHoop</span></div>
+<div>
+<div>     3.為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">BasketHoop</span> 添加子節點：</div>
+<div>
+<div>            (a.)右鍵 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">BasketHoop</span>，選擇「Add Node」&gt; <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Shape</span></div>
+<div>
+<div>            (b.)右鍵 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Shape</span>，選擇「Add Node」&gt; <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Geometry</span> &gt; <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Cylinder</span></div>
+<div>
+<div>            (c.)調整 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Cylinder</span> 屬性：</div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">                    (I) radius</span>：設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0.1</span>（籃框半徑 10cm）</div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">                   (II) height</span>：設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0.02</span>（籃框厚度 2cm）</div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">                  (III) subdivision</span>：設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">32</span>（圓滑度）</div>
+</div>
+</div>
+</div>
+<div>
+<div>     4.在 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Shape</span> 下添加 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Appearance</span>，設為紅色（<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">baseColor</span> 設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">1 0 0</span>）</div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">            (a.)translation</span>：設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0.4 0 0.3</span>（桌面邊緣後方，高度 30cm）</div>
+<div>
+<div>     5.添加物理屬性：</div>
+<div>
+<div>            (a.)右鍵 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">BasketHoop</span>，選擇「Add Node」&gt; <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Physics</span>（確保固定不動）</div>
+<div>
+<div><span style="background-color: #ffff00;"><strong>要點</strong>：籃框應為靜態物體，避免被球撞動</span></div>
+<div>
+<div>步驟 4：添加籃網（簡化版）</div>
+<div>
+<div><span style="background-color: #ffff00;"><strong></strong></span></div>
+<div><span style="background-color: #ffff00;"><strong></strong></span></div>
+<div><span style="background-color: #ffff00;"><strong>要點</strong>：這裡簡化為錐形，實際網狀結構需更複雜的建模，若有需求可後續調整</span></div>
+</div>
+<div>
+<div>步驟 5：添加籃球</div>
+<div>
+<div><span style="background-color: #ffff00;"><strong></strong></span></div>
+<div><span style="background-color: #ffff00;"><strong></strong></span></div>
+<div><span style="background-color: #ffff00;"><strong>要點</strong>：確保球有物理屬性，且位置不與桌面重疊，否則可能卡住</span></div>
+</div>
+<div>
+<div>步驟 6：添加投籃機制（簡化為槓桿）
+<div>     1.在場景樹頂層右鍵，選擇「Add Node」&gt; <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Solid</span>，命名為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Launcher</span>
+<div>     2.添加子節點：</div>
+<div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">            (a.)Shape</span> &gt; <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Geometry</span> &gt; <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Box</span>：</div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">                    (I)size</span>：設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0.2 0.05 0.01</span>（長 20cm，寬 5cm，厚 1cm）</div>
+</div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">            (b.)Appearance</span>：設為灰色（<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">baseColor</span> 設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0.5 0.5 0.5</span>）</div>
+</div>
+     3.添加物理屬性：</div>
+<div>
+<div>            (a.)<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Physics</span> &gt; <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">mass</span> 設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0.2</span></div>
+<div>     4.添加鉸鏈關節（模擬槓桿旋轉）：</div>
+<div>
+<div>
+<div>            (a.)在場景樹頂層右鍵，選擇「Add Node」&gt; <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">HingeJoint</span></div>
+<div>
+<div>            (b.)在 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">HingeJoint</span> 的 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">device</span> 中添加 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">RotationalMotor</span>，命名為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">LauncherMotor</span></div>
+<div>
+<div>            (c.)設置 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">jointParameters</span></div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn"><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">                    (I)</span></span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">anchor</span>：設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">-0.4 0 0</span>（鉸鏈固定在桌面前端）</div>
+<div>                   (II)<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">axis</span>：設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0 1 0</span>（沿 Y 軸旋轉）</div>
+<div>            (d.)將 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Launcher</span> 拖入 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">HingeJoint</span> 的 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">endPoint</span> 欄位</div>
+</div>
+</div>
+</div>
+<div>     5.調整 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Launcher</span> 位置：
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">            (a.)translation</span>：設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">-0.3 0 0.005</span>（與桌面接觸）</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div><span style="background-color: #ffff00;"><strong>要點</strong>：確保槓桿與球初始位置對齊，後續需編寫控制器讓其旋轉</span></div>
+</div>
+<div>
+<div>步驟 7：設置光源與背景</div>
+<div>
+<div>     1.添加光源：</div>
+<div>
+<div>            (a.)場景樹右鍵，選擇「Add Node」&gt; <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">PointLight</span></div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">            (b.)location</span>：設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0 0 1</span>（桌面上方 1m）</div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">            (c.)intensity</span>：設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">1</span></div>
+</div>
+</div>
+</div>
+<div>
+<div>     2.添加背景：</div>
+<div><span><span>            (a.)</span></span>場景樹右鍵，選擇「Add Node」&gt; <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Background</span></div>
+<div><span><span>            (b.)</span></span><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">skyColor</span>：設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0.5 0.5 1</span>（淺藍色天空）</div>
+<div>
+<div><span style="background-color: #ffff00;"><strong>要點</strong>：光源位置影響陰影效果，確保場景明亮可見</span></div>
+</div>
+</div>
+</div>
+<div>
+<div>步驟 8：保存與測試</div>
+<div>
+<div>     1.點擊「File」&gt;「Save World」</div>
+<div>     2.按工具欄「Play」按鈕運行仿真</div>
+<div>     3.觀察：</div>
+<div>
+<div>            (a.)球是否會因重力落在槓桿上</div>
+<div>
+<div>            (b.)籃框是否穩定</div>
+</div>
+<div><span style="background-color: #ffff00;"><strong>要點</strong>：若球卡住或場景異常，檢查物體的 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">translation</span> 是否重疊</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><br />task4 << <a href='task4.html'>Previous</a> <a href='task6.html'>Next</a> >> task6</div>
         
     <!-- footer -->
       <div class="container">
