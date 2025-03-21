@@ -155,14 +155,14 @@ for i in all_stud:
 <p></p>
 <p><strong><em>6.</em></strong>希望可以手把手一步步說明該如何利用<span style="background-color: #ffff00;">圖形介面</span> menu 建立這個場景，過程中有那些要點必須特別注意？</p>
 <div>
-<div>步驟 1：<strong>啟動 Webots 並創建新世界：</strong></div>
+<div><strong>步驟 1</strong>：<strong>啟動 Webots 並創建新世界：</strong></div>
 </div>
 <div>
 <div>開啟 Webots 後，點擊菜單欄的「File」&gt;「New World」<span style="background-color: #ccffcc;"><span style="background-color: #ccffcc;">(Ctrl+N)-(</span></span>創建一個空白的仿真世界，檔案副檔名為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">.wbt)</span></div>
 <div>
 <div><span style="background-color: #ffff00;"><strong>要點</strong>：儲存時選擇一個容易找到的路徑，避免後續找不到檔案。</span></div>
 <div>
-<div>步驊 2：添加桌面（地面）</div>
+<div><strong>步驊 2</strong>：添加桌面（地面）</div>
 </div>
 </div>
 <div>
@@ -180,7 +180,7 @@ for i in all_stud:
 <div>
 <div><span style="background-color: #ffff00;"><strong>要點</strong>：確保地面有 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Physics</span> 節點（預設已有），以啟用物理互動</span></div>
 <div>
-<div>步驟 3：添加籃框</div>
+<div><strong>步驟 3</strong>：添加籃框</div>
 <div>
 <div>     1.在場景樹中右鍵，選擇「Add Node」</div>
 <div>
@@ -213,21 +213,41 @@ for i in all_stud:
 <div>
 <div><span style="background-color: #ffff00;"><strong>要點</strong>：籃框應為靜態物體，避免被球撞動</span></div>
 <div>
-<div>步驟 4：添加籃網（簡化版）</div>
+<div><strong>步驟 4</strong>：添加籃網（簡化版）</div>
 <div>
-<div><span style="background-color: #ffff00;"><strong></strong></span></div>
-<div><span style="background-color: #ffff00;"><strong></strong></span></div>
+<div>
+<div>     1.在 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">BasketHoop</span> 下右鍵，選擇「Add Node」&gt; <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Shape</span></div>
+<div>
+<div>     2.添加 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Geometry</span> &gt; <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Cone</span>，模擬籃網：</div>
+<div>            (a.)<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">bottomRadius</span>：設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0.1</span>（與籃框相同）</div>
+</div>
+<div>            (b.)<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">height</span>：設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0.15</span>（網長 15cm）</div>
+<div>            (c.)<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">side</span>：設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">TRUE</span>，<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">bottom</span> 設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">FALSE</span>（空心錐形）</div>
+<div>     3.調整位置：</div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">            (a.)translation</span>：設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0 0 -0.075</span>（錐形從籃框向下延伸）</div>
+</div>
+<div>     4.設置外觀：</div>
+<div>            (a.)添加 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Appearance</span>，<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">baseColor</span> 設為白色（<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">1 1 1</span>），<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">transparency</span> 設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0.5</span>（半透明網狀感）</div>
+</div>
 <div><span style="background-color: #ffff00;"><strong>要點</strong>：這裡簡化為錐形，實際網狀結構需更複雜的建模，若有需求可後續調整</span></div>
 </div>
 <div>
-<div>步驟 5：添加籃球</div>
+<div><strong>步驟 5</strong>：添加籃球</div>
+<div>     1.在場景樹頂層右鍵，選擇「Add Node」&gt; <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Solid</span>，命名為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Basketball</span></div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn"><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">     2.</span></span>添加子節點：</div>
 <div>
-<div><span style="background-color: #ffff00;"><strong></strong></span></div>
-<div><span style="background-color: #ffff00;"><strong></strong></span></div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">            (a.)Shape</span> &gt; <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Geometry</span> &gt; <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Sphere</span>：</div>
+<div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">                    (I)radius</span>：設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">0.03</span>（直徑約 6cm，小型籃球）</div>
+</div>
+<div><span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">            (b.)Appearance</span>：設為橙色（<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">baseColor</span> 設為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">1 0.5 0</span>）</div>
+</div>
 <div><span style="background-color: #ffff00;"><strong>要點</strong>：確保球有物理屬性，且位置不與桌面重疊，否則可能卡住</span></div>
 </div>
 <div>
-<div>步驟 6：添加投籃機制（簡化為槓桿）
+<div><strong>步驟 6</strong>：添加投籃機制（簡化為槓桿）
 <div>     1.在場景樹頂層右鍵，選擇「Add Node」&gt; <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Solid</span>，命名為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Launcher</span>
 <div>     2.添加子節點：</div>
 <div>
@@ -268,7 +288,7 @@ for i in all_stud:
 <div><span style="background-color: #ffff00;"><strong>要點</strong>：確保槓桿與球初始位置對齊，後續需編寫控制器讓其旋轉</span></div>
 </div>
 <div>
-<div>步驟 7：設置光源與背景</div>
+<div><strong>步驟 7</strong>：設置光源與背景</div>
 <div>
 <div>     1.添加光源：</div>
 <div>
@@ -290,7 +310,7 @@ for i in all_stud:
 </div>
 </div>
 <div>
-<div>步驟 8：保存與測試</div>
+<div><strong>步驟 8</strong>：保存與測試</div>
 <div>
 <div>     1.點擊「File」&gt;「Save World」</div>
 <div>     2.按工具欄「Play」按鈕運行仿真</div>
@@ -301,6 +321,53 @@ for i in all_stud:
 <div>            (b.)籃框是否穩定</div>
 </div>
 <div><span style="background-color: #ffff00;"><strong>要點</strong>：若球卡住或場景異常，檢查物體的 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">translation</span> 是否重疊</span></div>
+<div><hr/><span style="background-color: #ffff00;"></span></div>
+<div>
+<div><strong>特別注意的要點</strong></div>
+<div>
+<div>
+<ul>
+<li class="break-words"><strong>物理屬性</strong>：
+<ul class="marker:text-secondary">
+<li class="break-words">每個動態物體（如球、槓桿）必須有 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Physics</span> 節點，否則不會受重力影響。</li>
+<li class="break-words">靜態物體（如籃框）也需 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">Physics</span>，但質量設為 0 或不設值。</li>
+</ul>
+</li>
+<li class="break-words"><strong>位置精確性</strong>：
+<ul class="marker:text-secondary">
+<li class="break-words">避免物體初始位置重疊，否則可能導致仿真崩潰或物體彈飛。</li>
+<li class="break-words">使用屬性面板輸入精確數值，而非僅靠 3D 視圖拖曳。</li>
+</ul>
+</li>
+<li class="break-words"><strong>關節與控制器</strong>：
+<ul class="marker:text-secondary">
+<li class="break-words">投籃槓桿需要控制器（Controller）驅動 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">RotationalMotor</span>，這部分需額外編寫程式碼（例如用 Python 或 C）。</li>
+<li class="break-words">測試時可手動調整槓桿角度（<span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">position</span>），模擬投籃動作。</li>
+</ul>
+</li>
+<li class="break-words"><strong>比例與單位</strong>：
+<ul class="marker:text-secondary">
+<li class="break-words">Webots 使用公尺作為單位，確保所有尺寸（如籃球半徑、桌面大小）符合現實比例。</li>
+</ul>
+</li>
+<li class="break-words"><strong>性能優化</strong>：
+<ul class="marker:text-secondary">
+<li class="break-words">避免添加過多複雜節點（如高細分網格），以免仿真變慢。</li>
+</ul>
+</li>
+</ul>
+<div><strong>後續建議</strong></div>
+<div>
+<div>
+<ul>
+<li class="break-words"><strong>控制器編寫</strong>：為 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">LauncherMotor</span> 添加一個簡單控制器，讓槓桿按鍵觸發旋轉，模擬投籃。</li>
+<li class="break-words"><strong>計分系統</strong>：添加 <span class="text-sm px-1 rounded-sm !font-mono bg-sunset/10 text-rust dark:bg-dawn/10 dark:text-dawn">TouchSensor</span> 到籃框，檢測球是否進籃。</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
