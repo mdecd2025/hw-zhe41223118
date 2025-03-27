@@ -149,7 +149,25 @@ for i in all_stud:
 <p><span style="background-color: #ffffff;">   操作依據有參考整理重點的-<a href="https://zhe41223118.github.io/cp2023/content/w13.html">這個網站</a></span></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/aZtLGjSjIPg?si=i4oKpWWSVXTR45Bi" title="YouTube video player" width="560"></iframe></p><h2>task3</h2>
 <h2>task4</h2>
-<h2>task5</h2>
+<p><span><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/de8d72a66126859139f42a25276bfa25/raw/1dd61ed37c8457f99353d5ddfd539bd27ff28a83/ag">2a分組網站與倉儲連結</a></span></p>
+<p><span><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/8ab2bde273de00d794d7d46d7540dc08/raw/8a7fdc0fc7cd89c04f5019fc620a0677f50b4fd6/bg">2b分組網站與倉儲連結</a></span></p>
+<p><span>因為上列程式已經給出兩班當時已經參與分組的學員 Github 帳號, 因此只需要從 </span><a href="https://mde.tw/list/2a.txt">https://mde.tw/list/2a.txt</a><span> 讀取學員的學號與 Github 帳號，並且在 for 迴圈中，逐一用學員的 Github 帳號相對於各班已經參與分組的學員 Github 帳號，並且列出特定學員的 Github 帳號不在前述已經參與分組的學員帳號數列中，即可列出截至當時尚未那組的學員學號。</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 甲班學員資料處理
+url = "https://mde.tw/list/2a.txt"
+data = open(url).readlines()
+all_stud = data[1:]
+a_all_members = ['41223154', '41271125', '41271158', '41271146', '41271131', 'CYG41223103', '41223102', '41023128', '41023137', '41223137', '41223157', '41223156', 'otakuyoyo', '41223141', '41223113', 'kim41223114', 'joeisme1208', '41223116', '41223144', '41223140', '41223143', '41223138', '41223134', '41223136', 'zhe41223118', 'Spirit0224', 'yuhao-08', '41223158', 'Ren911308', '41223150', 'Manto8', 'CYA41223106', 'yan21ed', 'Lin41223107', '41223133', 'hong41223129', '41223110', '41223147', 'Linjiahong41223125', 'CHN41223132', 'Yu-Fang-Hong', '41023111', 'yckaooooo', 'kolas911205', '41023105', '40932134', '41223104', 'yan41223101', '41223105', '41223153', '41223120', '41223152', 'G8People', 'WSE41223112', '41223146', '41223119']
+ 
+# 顯示甲班標題
+print("甲班:")
+for i in all_stud:
+    drop_n = i.rstrip("\n")
+    stud = drop_n.split("\t")
+    stud_num = stud[0]
+    stud_github = stud[1]
+    if stud_github not in a_all_members:
+        print(stud_num)</pre>
+<p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/fcdf65c3206155c5cd56140e47c6c87d/raw/8a5262e66228212fbc4f862ceaf67c798c9fb54c/2a-1">2a未加入團隊學員</a></p><h2>task5</h2>
 <p><em><strong>1.</strong></em>請用繁體中文詳細說明下列資料:<span> </span><a href="https://cyberbotics.com/doc/guide/introduction-to-webots">https://cyberbotics.com/doc/guide/introduction-to-webots </a></p>
 <p></p>
 <p><strong><em>2.</em></strong>請整理<span> </span><a href="https://cyberbotics.com/doc/guide/introduction-to-webots">https://cyberbotics.com/doc/guide/introduction-to-webots</a><span> </span>中重要的英文單字與用法，並且針對其中所使用的英文文法逐句說明：</p>
