@@ -127,8 +127,29 @@ for i in all_stud:
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/b_MSt6YTAvc?si=hQ647yc6Wnf3kQsa" title="YouTube video player" width="560"></iframe></p>
 <p><span>Webots 開啟、新建工作資料夾到<span style="background-color: #ffff00;">利用 box</span> 物件<span style="background-color: #ffff00;">建立 link</span>，利用 <span style="background-color: #ffff00;">HingeJoint 建立旋轉軸</span>，並且<span style="background-color: #ffff00;">利用 Python</span> controller 程式<span style="background-color: #ffff00;">控制 link 的旋轉<span style="background-color: #ffffff;">：</span></span></span></p>
 <h2>w6</h2>
-<h2>w7</h2>
-<h2>w8</h2>
+<p>如何啟動webots：在本學期可攜程式的start.bat中，已經有在可攜上啟動的程式，只需確認<a href="http://229.cycu.org/Webots_2025a_web.7z">Webots_2025a_web.7z</a><span> 是否壓縮放入可攜套件<span style="background-color: #ccffcc;">(</span></span><span style="background-color: #ccffcc;"><a href="http://229.cycu.org/portable_wcm2025.7z" style="background-color: #ccffcc;">portable_wcm2025.7z</a></span><span><span style="background-color: #ccffcc;">)</span>的 data 目錄中，如是使用舊版的可攜套件，也可在.bat啟動編碼中自行設定加入：</span></p>
+<pre class="brush:csharp;auto-links:false;toolbar:false" contenteditable="false">REM for Webots
+set PYTHON_PATH=%Disk%:\Python313
+ 
+REM for webots
+set  path_webots=%Disk%:\Webots_2025a\msys64\mingw64\bin;%Disk%:\Webots_2025a\msys64\usr\bin
+ 
+path=%Disk%:;%path_python%;%path_git%;%path_copsim%;%path_msys2%;%path_miketex%;%path_flutter%;%path_node%;%path_tcc%;%path_postgresql%;%path_range%;%path_lua%;%path_core%;%path_putty%;%path_vscode%;%RUST_PATH%;%path_erlang%;%path_nodejs%;%path_haskell%;%path_scite%;%path_xsltproc%;%path_gnuplot%;%path_openssl%;%path_poppler%;%path_webots%;%path_blender%;%path%;
+</pre>
+<p>即可。</p>
+<p><span style="background-color: #ccffcc;">(常見問題：解壓縮檔案內檔案還有一層，如未依照自己設定路徑放置，webots會無法開啟</span></p>
+<p>                <span style="background-color: #ccffcc;">有些人還在使用舊版可攜程式，.bat沒有webots啟動設定</span></p>
+<p>                <span style="background-color: #ccffcc;">在開啟webots時系統會有跳出警告防火牆，其中一定要選擇允許，否則防火牆會擋)</span></p>
+<p></p><h2>w7</h2>
+<p>本週因連假而未上課，將當週上課班級上課內容整理至此。</p>
+<p>建立 fourbar box 過程中的要點：</p>
+<ol style="list-style-type: lower-roman;">
+<li>各 Solid - Shape - geometry 在建立 open chain 機構時，可以在尚未設定 physics 之前單軸運轉，但 Webots 牽涉需要模擬 closed chain 機構時，各 Solid - Shape -geometry 則必須設定 boundingObject 與 physics 才能透過 solidReference 進行 dynamics 聯立運算，亦即 Webots 在模擬封閉機構時，只能處理 Dynamics 模擬。                                                                                                                 <span style="background-color: #ccffcc;">(原因是其模擬運算是從 <a href="https://www.ode.org/" style="background-color: #ccffcc;">ODE</a> 動力程式庫修改而來，並沒有附加 closed chain 的 kinematics 運算)</span></li>
+<li>當個別 link 採 box 建立時，為了要符合其 kinematics 運動約束條件，各桿件的起始條件必須滿足 fourbar linkage 的約束條件，因此只有 link1 旋轉 90 度，可以在 x 與 y 軸同動的情況下無需透 pose 進行局部座標轉換, 但 link2 與 link3 在納入 Shape 之前必須立 pose 節點置入額外的座標轉換。</li>
+<li>各 link 的 boundingObject 欄位，可以透過其 link Shape 採 USE 的方式重用。</li>
+<li>最後 joint4 的旋轉中心則透過 solidReference 與 link3 的端點座標重合，才能完成 closed chain 的動力約束條件模擬。</li>
+</ol>
+<p></p><h2>w8</h2>
 <h1>tasks</h1>
 <p><span>task1 與 task2 任務為建立可在<span style="background-color: #ffff00;">近端維護個人作業與協同作業</span>的前置準備工作：</span></p>
 <p><span><em><strong>1.</strong></em> </span>task1 (自行製作可攜程式系統)</p>

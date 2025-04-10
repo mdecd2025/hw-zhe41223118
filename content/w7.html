@@ -143,7 +143,15 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">w6 << <a href='w6.html'>Previous</a> <a href='w8.html'>Next</a> >> w8<br /><h1>w7</h1>
-<br />w6 << <a href='w6.html'>Previous</a> <a href='w8.html'>Next</a> >> w8</div>
+<p>本週因連假而未上課，將當週上課班級上課內容整理至此。</p>
+<p>建立 fourbar box 過程中的要點：</p>
+<ol style="list-style-type: lower-roman;">
+<li>各 Solid - Shape - geometry 在建立 open chain 機構時，可以在尚未設定 physics 之前單軸運轉，但 Webots 牽涉需要模擬 closed chain 機構時，各 Solid - Shape -geometry 則必須設定 boundingObject 與 physics 才能透過 solidReference 進行 dynamics 聯立運算，亦即 Webots 在模擬封閉機構時，只能處理 Dynamics 模擬。                                                                                                                 <span style="background-color: #ccffcc;">(原因是其模擬運算是從 <a href="https://www.ode.org/" style="background-color: #ccffcc;">ODE</a> 動力程式庫修改而來，並沒有附加 closed chain 的 kinematics 運算)</span></li>
+<li>當個別 link 採 box 建立時，為了要符合其 kinematics 運動約束條件，各桿件的起始條件必須滿足 fourbar linkage 的約束條件，因此只有 link1 旋轉 90 度，可以在 x 與 y 軸同動的情況下無需透 pose 進行局部座標轉換, 但 link2 與 link3 在納入 Shape 之前必須立 pose 節點置入額外的座標轉換。</li>
+<li>各 link 的 boundingObject 欄位，可以透過其 link Shape 採 USE 的方式重用。</li>
+<li>最後 joint4 的旋轉中心則透過 solidReference 與 link3 的端點座標重合，才能完成 closed chain 的動力約束條件模擬。</li>
+</ol>
+<p></p><br />w6 << <a href='w6.html'>Previous</a> <a href='w8.html'>Next</a> >> w8</div>
         
     <!-- footer -->
       <div class="container">
