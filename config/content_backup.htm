@@ -161,7 +161,19 @@ path=%Disk%:;%path_python%;%path_git%;%path_copsim%;%path_msys2%;%path_miketex%;
 <p><img alt="" height="521" src="/images/螢幕擷取畫面 (25).png" width="510"/></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/0JEJCfbpLYA?si=ZWZ2WklfgmKaquNs" title="YouTube video player" width="560"></iframe></p>
 <h2>w8</h2>
-<h1>tasks</h1>
+<p>複習webots<span> </span><a href="https://cyberbotics.com/doc/reference/solidreference">SolidReference</a><span><span> </span>節點的用法說明，用在 Joint 節點的 endPoint 欄位中，用來指向一個現有的 Solid 或靜態環境 <span style="background-color: #ffff00;">&lt;static environment&gt;</span>。通過這種方式，可以閉合機械迴圈。</span></p>
+<p><span>當指向一個 Solid 時，唯一的限制是 Solid 和 Joint 必須是某個共同上層 Solid 的下層。</span></p>
+<p>意思即是指 SolidReference 是一個引用類型，允許在 Joint 節點的 endPoint 欄位中指定某個目標。</p>
+<p>它可以指向兩種類型的對象：</p>
+<ol>
+<li>現有的 Solid：這是一個具體的實體，但這個 Solid 和 Joint 必須是某個共同上層 Solid 的下層。</li>
+<li>靜態環境 &lt;static environment&gt;：這通常指的是不動的參考框架（例如地面或固定基座）</li>
+</ol>
+<p><span>第一作法：</span></p>
+<p><span>若將 fourbar linkage 的 joint4 設置在 base link 的最右端，然後將 joint4 的 endPoint 欄位，設為 SolidReference 指向 link3，即可符合 Soild (link3) 與 Joint (joint4) 都是某個共同上層 Solid (base) 的下層。</span></p>
+<p><span>第二作法：</span></p>
+<p><span>可以將 fourbar linkage 的 joint4 設置在 link3 的末端，然後將 joint4 的 endPoint 欄位指向 <span style="background-color: #ffff00;">&lt;static environment&gt;</span>，讓 link3 的末端固定在 ground (其作用與固定在 base 節點相同)。</span></p>
+<p><span></span></p><h1>tasks</h1>
 <p><span>task1 與 task2 任務為建立可在<span style="background-color: #ffff00;">近端維護個人作業與協同作業</span>的前置準備工作：</span></p>
 <p><span><em><strong>1.</strong></em> </span>task1 (自行製作可攜程式系統)</p>
 <p><em><strong>2.</strong></em> task2 ( SSH 協定執行作業倉儲的推送)</p>
@@ -495,8 +507,8 @@ for i in all_stud:
 <h2>HW1</h2>
 <p>HW1 (5%): <span style="background-color: #ffff00;">建立由 Box 組成的平面四連桿機構 Webots 模擬場景</span></p>
 <p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 HW1 - 學員學號</p>
-<p></p>
-<h2>HW2</h2>
+<p>題目要求尺寸：<span>利用 box 幾何外形節點建立平面四連桿機構的模擬場景，要求地面<span style="background-color: #ffff00;">固定桿長度 1m</span>，<span style="background-color: #ffff00;">寬高各為 0.1m</span>，<span style="background-color: #ffff00;">第一桿長度 0.4m</span>，<span style="background-color: #ffff00;">第二桿長度 0.6m</span>，<span style="background-color: #ffff00;">第三桿長度 0.9m</span>。</span></p>
+<p><span></span></p><h2>HW2</h2>
 <p>HW2 (5%): <span style="background-color: #ffff00;">建立由 CAD 繪製零件組成的平面四連桿機構 Webots 模擬場景</span></p>
 <p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 HW2 - 學員學號</p>
 <p></p>
