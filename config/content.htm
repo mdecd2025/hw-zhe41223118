@@ -230,17 +230,474 @@ for i in all_stud:
         print(stud_num)</pre>
 <p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/fcdf65c3206155c5cd56140e47c6c87d/raw/8a5262e66228212fbc4f862ceaf67c798c9fb54c/2a-1">2a未加入團隊學員</a></p>
 <h2>task5</h2>
-<p><em><strong>1.</strong></em>請用繁體中文詳細說明下列<a href="https://cyberbotics.com/doc/guide/introduction-to-webots">資料</a></p>
-<p></p>
-<p><strong><em>2.</em></strong>請整理<span><a href="https://cyberbotics.com/doc/guide/introduction-to-webots">網頁</a></span>中重要的英文單字與用法，並且針對其中所使用的英文文法逐句說明：</p>
-<p></p>
-<p><strong><em>3.</em></strong>請摘要出下列內容：(放入英文文章內容)</p>
-<p></p>
+<p><em><strong>1.</strong></em>請用繁體中文詳細說明下列<a href="https://cyberbotics.com/doc/guide/introduction-to-webots">資料</a>：(<span style="background-color: #ccffcc;">41223136<span style="background-color: #ffffff;">)</span></span></p>
+<p>Q1：什麼是Webots?</p>
+<p>Webots是一款專業的移動機器人模擬軟件，提供了3D虛擬環境，支持物理屬性設計，並且可創建不同類型的機器人(輪式、腿式、飛行)，並添加傳感器和執行器。支持單獨編程機器人以實現特定行為，提供大量模型和示例。模擬成功後，可以將程序轉移至真實的機器人，支持擴展新接口。</p>
+<p>Q2：我可以用Webots做什麼?</p>
+<p>應用領域：適用在移動機器人原型設計、運動研究、多代理系統、適應行為研究。</p>
+<p>行業範圍：涵蓋學術、汽車、航空、吸塵器、玩具等行業。</p>
+<p>教育用途：支持機器人學和編程教學（C/C++/Java/Python）</p>
+<p>競賽：可用於機器人比賽。</p>
+<p><span>Q3：要使用Webots，我需要知道什麼?</span></p>
+<ol>
+<li>程式語言知識 ：需具備<span>C、C++、Java、Python或MATLAB</span>的基本知識來撰寫機器人控制器。若不熟悉語言可使用<span>簡單圖形化程式語言BotStudio編程</span>(適用於e-puck和Hemisson機器人)</li>
+<li>3D模型創建：需了解<span>3D電腦圖形</span>和<span>VRML97</span>描述語言。</li>
+</ol>
+<p>Q4：什麼是世界?</p>
+<ul>
+<li>世界定義：描述3D涵蓋機器人及其環境的所有屬性(如位置、方向、幾何、外觀、物理屬性等)</li>
+<li>層次結構：物件以層次方式組織，可包含其他物件(輪子、感測器、關節等)</li>
+<li>功能與限制：(.wbt)不含控制器程示碼，只指定每個機器人所需的控制器名稱。</li>
+<li>儲存位置：檔案以".wbt"格式儲存，位於Webots專案的"worlds"子目錄</li>
+</ul>
+<p>Q5：什麼是控制器?</p>
+<ol>
+<li>控制器定義：控制器是用來控制world檔案中機器人的電腦程式</li>
+<li>運行機制：模擬開始時，Webots為每個機器人啟動獨立的控制進程，多個機器人可共用同一程式碼，但每個機器人有獨立進程。</li>
+<li>儲存位置：控制器檔案儲存在專案的"controllers"子目錄</li>
+</ol>
+<p>這是Webots中控制器的<span>核心概念</span>，<span>強調其獨立性與語言支援的多樣性</span>。</p>
+<p>Q6：什麼是監督控制器?</p>
+<ol>
+<li>監督控制器定義：當機器人的<span>supervisor欄位設為TURE<span>，控制器成為監督控制器。能執行人類操作員的任務，而非真實機器人能完成的動作。</span><span></span></span></li>
+<li><span><span>特權操作：與一般控制器不同，監督控制器擁有特權功能，包括模擬控制，如隨機移動機器人、錄製模擬影片等。</span></span></li>
+</ol>
+<p><strong><em>2.</em></strong>請整理<span><a href="https://cyberbotics.com/doc/guide/introduction-to-webots">網頁</a></span>中重要的英文單字與用法，並且針對其中所使用的英文文法逐句說明：<span style="background-color: #ffffff;">(<span style="background-color: #ccffcc;">41223122</span>)</span></p>
+<ol data-end="1116" data-start="38">
+<li data-end="175" data-start="38">
+<p data-end="77" data-start="41"><strong data-end="68" data-start="41">Mobile robot simulation</strong>（移動機器人模擬）</p>
+<strong data-end="89" data-start="83">差異</strong>：英文中的「simulation」指的是在虛擬環境中模擬機器人行為，而中文「模擬」同樣表示模仿，但在某些語境下，可能沒有英文「simulation」那麼強烈的虛擬環境暗示。</li>
+<li data-end="282" data-start="177">
+<p data-end="209" data-start="180"><strong data-end="201" data-start="180">Rapid prototyping</strong>（快速原型設計）</p>
+<strong data-end="221" data-start="215">差異</strong>：英文「prototyping」具體指「製作原型」這個過程，而中文「原型設計」更偏向結果導向，較少強調「製作過程」的含義。</li>
+<li data-end="396" data-start="284">
+<p data-end="315" data-start="287"><strong data-end="309" data-start="287">Physics properties</strong>（物理屬性）</p>
+<strong data-end="327" data-start="321">差異</strong>：英文「properties」除了「屬性」，也可以指物理環境中的具體特徵和參數，而中文的「屬性」更多強調事物的性質，而不一定包含具體數值。</li>
+<li data-end="542" data-start="398">
+<p data-end="429" data-start="401"><strong data-end="423" data-start="401">Locomotion schemes</strong>（移動方式）</p>
+<strong data-end="441" data-start="435">差異</strong>：英文「locomotion」特指機器人或動物的移動方式，包括步行、飛行等具體方式；而中文「移動」泛指動作，涵蓋範圍更廣泛。英文「schemes」強調設計、計劃的結構，但中文「方式」沒有強烈的規劃意味。</li>
+<li data-end="637" data-start="544">
+<p data-end="575" data-start="547"><strong data-end="569" data-start="547">Controller program</strong>（控制程式）</p>
+<strong data-end="587" data-start="581">差異</strong>：英文「controller」強調設備或程式的控制功能，而中文「控制」可能更多指行為，而非具體裝置。</li>
+<li data-end="740" data-start="639">
+<p data-end="665" data-start="642"><strong data-end="658" data-start="642">Robot models</strong>（機器人模型）</p>
+<strong data-end="677" data-start="671">差異</strong>：英文「model」不僅指模型，還可以包含系統設計的概念，而中文「模型」更偏向於外形或結構，缺乏英文中「概念模型」的深層意義。</li>
+<li data-end="848" data-start="742">
+<p data-end="773" data-start="745"><strong data-end="767" data-start="745">Swarm intelligence</strong>（群體智能）</p>
+<strong data-end="785" data-start="779">差異</strong>：英文「swarm」特指動物或機器人的群體行動，並且有合作與集體行為的含義，而中文「群體」也可指單純的個體聚集，未必強調合作。</li>
+<li data-end="961" data-start="850">
+<p data-end="880" data-start="853"><strong data-end="874" data-start="853">Genetic algorithm</strong>（遺傳算法）</p>
+<strong data-end="892" data-start="886">差異</strong>：英文「genetic」在此術語中引用遺傳學理論，而中文「遺傳」通常與生物學相關，在技術環境下可能需要具體說明該算法如何模仿生物遺傳過程。</li>
+<li data-end="1072" data-start="963">
+<p data-end="991" data-start="966"><strong data-end="985" data-start="966">Neural networks</strong>（神經網絡）</p>
+<strong data-end="1003" data-start="997">差異</strong>：英文中的「neural」源於生物神經系統，並引申至機器學習模型，而中文「神經」更多指生物概念，除非在明確的技術背景下才會引申至計算領域。</li>
+<li data-end="1116" data-start="1074">
+<p data-end="1116" data-start="1078"><strong data-end="1110" data-start="1078">Artificial intelligence (AI)</strong>（人工智能）</p>
+<strong data-end="1128" data-start="1122">差異</strong>：英文「artificial intelligence」是技術術語，指模擬人類智能的系統，中文「人工智能」直接翻譯，但中文的「人工」有時強調「人為」製造，可能略有不同的語感。</li>
+</ol>
+<ol data-end="1255" data-start="1217" start="11">
+<li data-end="1255" data-start="1217"><strong data-end="1246" data-start="1221">Supervisor controller</strong>（監督者控制程式）<strong data-end="1267" data-start="1261">差異</strong>：英文「supervisor」在此指具有高級管理功能的控制器，而中文「監督者」更多強調「人」的角色，控制程式翻譯時可能會弱化其技術層面的管理權限含義。</li>
+</ol>
+<ol data-end="1380" data-start="1344" start="12">
+<li data-end="1380" data-start="1344"><strong data-end="1372" data-start="1348">Multi-agent research</strong>（多智能體研究）<strong data-end="1392" data-start="1386">差異</strong>：英文「agent」具備自主行為或決策功能，中文「智能體」強調的是智能或行動個體，但「體」的翻譯可能較模糊，沒有完全涵蓋英文中「agent」的主動性和自決性。</li>
+</ol>
+<ol data-end="1505" data-start="1473" start="13">
+<li data-end="1505" data-start="1473"><strong data-end="1499" data-start="1477">Simulation control</strong>（模擬控制）<strong data-end="1517" data-start="1511">差異</strong>：英文「simulation」強調在虛擬或模擬環境中的控制，而中文「模擬控制」雖然意義相同，但「模擬」一詞在某些語境下會與「模仿」混淆。</li>
+</ol>
+<ol data-end="1621" data-start="1587" start="14">
+<li data-end="1621" data-start="1587"><strong data-end="1612" data-start="1591">3D virtual worlds</strong>（3D 虛擬世界）<strong data-end="1633" data-start="1627">差異</strong>：英文「virtual worlds」通常指的是由電腦生成的虛擬環境，而中文「虛擬世界」在非技術環境中也可能指非現實的想像世界，因此技術語境中需要強調其數位屬性。</li>
+</ol>
+<p><strong><em>3.</em></strong>請摘要出下列內容：(放入英文文章內容)：(<span style="background-color: #ccffcc;">41223134</span>)</p>
+<ul>
+<li class="break-words"><strong>What is Webots?</strong><br/>Webots is a professional mobile robot simulation software that provides a rapid prototyping environment. It allows users to create 3D virtual worlds with physics properties (e.g., mass, joints, friction) and add passive or active objects like mobile robots. Users can equip robots with sensors and actuators and program them for desired behaviors. It offers numerous robot models, examples, and interfaces to transfer simulations to real robots like e-puck or Nao.</li>
+</ul>
+<ul>
+<li class="break-words"><strong>What can I do with Webots?</strong><br/>Webots is ideal for research and education in mobile robotics, supporting projects like robot prototyping (e.g., academic, automotive, toy industries), locomotion research (legged, humanoid robots), multi-agent studies (swarm intelligence, collaborative robots), and adaptive behavior research (genetic algorithms, AI). It’s also used for teaching robotics and robot competitions.</li>
+</ul>
+<ul>
+<li class="break-words"><strong>What do I need to know to use Webots?</strong><br/>Basic knowledge of C, C++, Java, Python, or MATLAB is required to program controllers, though beginners can use the graphical BotStudio language for certain robots (e.g., e-puck). To create custom models or environments, familiarity with 3D graphics and VRML97 is needed for designing or importing 3D objects.</li>
+</ul>
+<ul>
+<li class="break-words"><strong>How do I get User Support?</strong><br/>Cyberbotics offers paid support via Premier Service plans and custom development. Community-based support is available through Robotics StackExchange (webots tag), GitHub Discussions (development questions), GitHub Issues (bug reports), and Discord (quick discussions), though responses aren’t guaranteed.</li>
+</ul>
+<ul>
+<li class="break-words"><strong>Webots Simulation</strong><br/>A Webots simulation consists of a world file (.wbt) defining robots and their environment, controller programs (in C/C++/Java/Python/MATLAB), and an optional physics plugin (in C/C++) to adjust physics behavior. World files may rely on external PROTO files and textures.</li>
+</ul>
+<ul>
+<li class="break-words"><strong>What is a World?</strong><br/>A "world" in Webots is a 3D description of robots and their environment, detailing properties like position, geometry, appearance, and physics. Organized hierarchically (like VRML97), world files (.wbt) specify controller names but don’t include the controller code itself.</li>
+</ul>
+<ul>
+<li class="break-words"><strong>What is a Controller?</strong><br/>A controller is a program that directs a robot in a world file, written in C, C++, Java, Python, or MATLAB. Webots launches each controller as a separate process per robot at simulation start. Some languages require compilation (e.g., C/C++), others interpretation (e.g., Python), with files stored in the "controllers" subdirectory.</li>
+</ul>
+<ul>
+<li class="break-words"><strong>What is a Supervisor Controller?</strong><br/>A supervisor controller, tied to a robot with its "supervisor" field set to TRUE, can perform privileged actions (e.g., simulation control, moving robots, recording videos) typically reserved for human operators. Written in any supported language, it has greater capabilities than standard controllers.</li>
+</ul>
 <p><strong><em>4.</em></strong>請列出上述文章中的重要的英文單字與解釋，以及出現在文句中的用法：</p>
 <p></p>
-<p><strong><em>5.</em></strong>請詳細說明如何採手動方式在 Webots 建立下列場景：</p>
+<p><strong><em>5.</em></strong>請詳細說明如何採手動方式在 Webots 建立下列場景：(<span style="background-color: #ccffcc;">41223158</span>)</p>
+<h4><span>步驟 1：創建新世界</span></h4>
+<ol>
+<li>
+<p><strong>啟動 Webots</strong>：</p>
+<ul>
+<li>打開 Webots 軟體，並進入主介面。</li>
+</ul>
+</li>
+<li>
+<p><strong>創建新世界</strong>：</p>
+<ul>
+<li>在 Webots 的主畫面中，選擇<span> </span><code inline="">File</code><span> </span>&gt;<span> </span><code inline="">New World</code>，這會創建一個名為<span> </span><code inline="">untitled.wbt</code><span> </span>的新世界。</li>
+<li>新創建的世界會有一個預設的地面，並且已經設定了一些基本參數。</li>
+</ul>
+</li>
+</ol>
+<h4><span>步驟 2：設置桌面結構</span></h4>
+<ol>
+<li>
+<p><strong>新增桌子（Solid）</strong>：</p>
+<ul>
+<li>在<span> </span><code inline="">Scene Tree</code><span> </span>中，右鍵點選<span> </span><code inline="">WorldInfo</code><span> </span>節點，選擇<span> </span><code inline="">Add</code><span> </span>&gt;<span> </span><code inline="">Solid</code>，會在場景中新增一個<span> </span><code inline="">Solid</code><span> </span>節點。這個<span> </span><code inline="">Solid</code><span> </span>節點將代表你的桌子。</li>
+</ul>
+</li>
+<li>
+<p><strong>新增桌面的形狀（Shape）</strong>：</p>
+<ul>
+<li>在<span> </span><code inline="">Solid</code><span> </span>節點下，右鍵點選<span> </span><code inline="">Solid</code><span> </span>節點，選擇<span> </span><code inline="">Add</code><span> </span>&gt;<span> </span><code inline="">Shape</code><span> </span>&gt;<span> </span><code inline="">Box</code>。這將創建一個長方體來代表桌面。</li>
+</ul>
+</li>
+<li>
+<p><strong>設定桌子尺寸</strong>：</p>
+<ul>
+<li>點選<span> </span><code inline="">Box</code><span> </span>節點，然後在右側的屬性面板中設定<span> </span><code inline="">size</code><span> </span>參數來調整桌子的大小。假設我們的桌子尺寸是 2 米長，1 米寬，0.1 米高，設定如下：</li>
+</ul>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_976851">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">size 2 0.1 1</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</li>
+<li>
+<p><strong>設置桌子的顏色</strong>：</p>
+<ul>
+<li>點選<span> </span><code inline="">Solid</code><span> </span>節點，右鍵選擇<span> </span><code inline="">Appearance</code>，然後設定材質的顏色。你可以選擇木色或其他顏色來模擬桌子表面。</li>
+</ul>
+</li>
+</ol>
+<h4><span>步驟 3：創建籃球框</span></h4>
+<ol>
+<li>
+<p><strong>新增籃框（Solid）</strong>：</p>
+<ul>
+<li>在<span> </span><code inline="">Scene Tree</code><span> </span>中，右鍵點選<span> </span><code inline="">WorldInfo</code><span> </span>節點，選擇<span> </span><code inline="">Add</code><span> </span>&gt;<span> </span><code inline="">Solid</code>，再右鍵選擇新創建的<span> </span><code inline="">Solid</code><span> </span>節點，選擇<span> </span><code inline="">Add</code><span> </span>&gt;<span> </span><code inline="">Shape</code><span> </span>&gt;<span> </span><code inline="">Cylinder</code>。這將創建一個圓柱形的籃框。</li>
+</ul>
+</li>
+<li>
+<p><strong>設置籃框的大小與位置</strong>：</p>
+<ul>
+<li>點選<span> </span><code inline="">Cylinder</code><span> </span>節點，並在右側屬性面板中設定<span> </span><code inline="">radius</code><span> </span>和<span> </span><code inline="">height</code>。例如：</li>
+</ul>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_632874">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">radius 0.2</code></div>
+<div class="line number2 index1 alt1"><code class="html plain">height 0.05</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<ul>
+<li>設定<span> </span><code inline="">translation</code><span> </span>來調整籃框的位置。假設我們要把籃框放置在桌面上方，並放置在桌子的遠端。設定如下：</li>
+</ul>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_628963">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">translation 0 0.6 -0.5</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>這樣，籃框就會位於桌子的上方，距離桌面的高度為 0.6 米。</p>
+</li>
+</ol>
+<h4><span>步驟 4：創建籃球</span></h4>
+<ol>
+<li>
+<p><strong>新增籃球（Solid）</strong>：</p>
+<ul>
+<li>在<span> </span><code inline="">Scene Tree</code><span> </span>中，右鍵點選<span> </span><code inline="">WorldInfo</code><span> </span>節點，選擇<span> </span><code inline="">Add</code><span> </span>&gt;<span> </span><code inline="">Solid</code>，然後右鍵選擇新創建的<span> </span><code inline="">Solid</code><span> </span>節點，選擇<span> </span><code inline="">Add</code><span> </span>&gt;<span> </span><code inline="">Shape</code><span> </span>&gt;<span> </span><code inline="">Sphere</code>。這將創建一個球形的籃球。</li>
+</ul>
+</li>
+<li>
+<p><strong>設定籃球大小與顏色</strong>：</p>
+<ul>
+<li>點選<span> </span><code inline="">Sphere</code><span> </span>節點，在右側屬性面板中設定<span> </span><code inline="">radius</code>，例如將<span> </span><code inline="">radius</code><span> </span>設定為 0.1 米，代表籃球的直徑為 20 公分。</li>
+</ul>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_758629">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">radius 0.1</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<ul>
+<li>設定顏色，為了讓籃球看起來像真實的籃球，可以選擇橙色。這樣籃球就會顯示為橙色。</li>
+</ul>
+</li>
+<li>
+<p><strong>設定籃球的位置</strong>：</p>
+<ul>
+<li>設定<span> </span><code inline="">translation</code>，將籃球放置於桌面上方，距離桌面大約 0.2 米。</li>
+</ul>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_365891">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">translation 0 0.2 -0.5</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</li>
+</ol>
+<h4><span>步驟 5：設置物理屬性</span></h4>
+<ol>
+<li>
+<h4><strong>設定桌子與籃框的物理屬性</strong>：</h4>
+<ul>
+<li>
+<h4>桌子和籃框不需要太多的彈性，但需要摩擦力，這樣物體才能有真實的接觸效果。</h4>
+</li>
+</ul>
+<h4>在<span> </span><code inline="">Solid</code><span> </span>節點中添加物理屬性設定：</h4>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_830099">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">Physics { </code></div>
+<div class="line number2 index1 alt1"><code class="html spaces">        </code><code class="html plain">density 1.0 </code></div>
+<div class="line number3 index2 alt2"><code class="html spaces">        </code><code class="html plain">friction 0.9 </code></div>
+<div class="line number4 index3 alt1"><code class="html spaces">        </code><code class="html plain">bounce 0.0 # 桌子和籃框不會反彈 </code></div>
+<div class="line number5 index4 alt2"><code class="html plain">}</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<h4><br/><br/></h4>
+</li>
+<li>
+<p><strong>設定籃球的物理屬性</strong>：</p>
+<ul>
+<li>籃球需要較高的彈性，以便它能夠反彈。可以設置以下屬性：</li>
+</ul>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_289004">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">Physics {</code></div>
+<div class="line number2 index1 alt1"><code class="html spaces">    </code><code class="html plain">density 0.5</code></div>
+<div class="line number3 index2 alt2"><code class="html spaces">    </code><code class="html plain">friction 0.3</code></div>
+<div class="line number4 index3 alt1"><code class="html spaces">    </code><code class="html plain">bounce 0.7  # 籃球有較高的反彈</code></div>
+<div class="line number5 index4 alt2"><code class="html plain">}</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</li>
+</ol>
+<h4><span>步驟 6：創建控制器</span></h4>
+<ol>
+<li>
+<h4><strong>創建 Python 控制器程式</strong>：</h4>
+<ul>
+<li>
+<h4>在 Webots 中，你需要使用控制器來控制物體的行為，例如投籃等。創建一個新的 Python 控制器，並將其命名為<span> </span><code inline="">basketball_controller.py</code>。</h4>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>編寫控制器邏輯</strong>：</p>
+<ul>
+<li>控制器的主要目的是監控籃球的運動，並在籃球進入籃框時進行計分。下面是一個簡單的範例程式，會檢查籃球是否進入籃框範圍。</li>
+<li>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_160064">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+<div class="line number10 index9 alt1">10</div>
+<div class="line number11 index10 alt2">11</div>
+<div class="line number12 index11 alt1">12</div>
+<div class="line number13 index12 alt2">13</div>
+<div class="line number14 index13 alt1">14</div>
+<div class="line number15 index14 alt2">15</div>
+<div class="line number16 index15 alt1">16</div>
+<div class="line number17 index16 alt2">17</div>
+<div class="line number18 index17 alt1">18</div>
+<div class="line number19 index18 alt2">19</div>
+<div class="line number20 index19 alt1">20</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">範例程式碼：</code></div>
+<div class="line number2 index1 alt1"> </div>
+<div class="line number3 index2 alt2"><code class="html plain">from controller import Robot</code></div>
+<div class="line number4 index3 alt1"> </div>
+<div class="line number5 index4 alt2"><code class="html plain"># 創建 robot 物件來控制 Webots 模擬</code></div>
+<div class="line number6 index5 alt1"><code class="html plain">robot = Robot()</code></div>
+<div class="line number7 index6 alt2"><code class="html plain">timestep = int(robot.getBasicTimeStep())</code></div>
+<div class="line number8 index7 alt1"> </div>
+<div class="line number9 index8 alt2"><code class="html plain"># 獲取籃球的物體</code></div>
+<div class="line number10 index9 alt1"><code class="html plain">ball = robot.getFromDef("BASKETBALL")</code></div>
+<div class="line number11 index10 alt2"><code class="html plain">ball_position = ball.getPosition()</code></div>
+<div class="line number12 index11 alt1"> </div>
+<div class="line number13 index12 alt2"><code class="html plain"># 模擬循環</code></div>
+<div class="line number14 index13 alt1"><code class="html plain">while robot.step(timestep) != -1:</code></div>
+<div class="line number15 index14 alt2"><code class="html spaces">    </code><code class="html plain"># 更新籃球的位置</code></div>
+<div class="line number16 index15 alt1"><code class="html spaces">    </code><code class="html plain">ball_position = ball.getPosition()</code></div>
+<div class="line number17 index16 alt2"> </div>
+<div class="line number18 index17 alt1"><code class="html spaces">    </code><code class="html plain"># 如果籃球進入籃框範圍，則顯示得分訊息</code></div>
+<div class="line number19 index18 alt2"><code class="html spaces">    </code><code class="html plain">if ball_position[0] &gt; 0.5 and ball_position[0] &lt; </code><code class="html keyword">1.5</code> <code class="html plain">and ball_position[1] &gt; 0.5:</code></div>
+<div class="line number20 index19 alt1"><code class="html spaces">        </code><code class="html plain">print("得分！")</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</li>
+</ul>
 <p></p>
-<p><strong><em>6.</em></strong>希望可以手把手一步步說明該如何利用<span style="background-color: #ffff00;">圖形介面</span> menu 建立這個場景，過程中有那些要點必須特別注意？</p>
+</li>
+<li>
+<p><strong>連接控制器與世界</strong>：</p>
+<ul>
+<li>在 Webots 中，點選<span> </span><code inline="">WorldInfo</code><span> </span>節點，在屬性面板中找到<span> </span><code inline="">controller</code><span> </span>屬性，並將其設置為剛創建的控制器程式名稱<span> </span><code inline="">basketball_controller.py</code>。</li>
+</ul>
+</li>
+</ol>
+<h4><span>步驟 7：測試與調整</span></h4>
+<ol>
+<li>
+<p><strong>啟動模擬</strong>：</p>
+<ul>
+<li>點選 Webots 上方的<span> </span><code inline="">Play</code><span> </span>按鈕來啟動模擬。</li>
+<li>你應該可以看到籃球在桌子上彈跳，並且控制器會檢測籃球是否進入籃框並顯示得分。</li>
+</ul>
+</li>
+<li>
+<p><strong>調整參數</strong>：</p>
+<ul>
+<li>如果籃球的反彈效果或運動不符合預期，可以調整物理屬性（例如彈性、摩擦力、質量）來改善模擬效果。</li>
+</ul>
+</li>
+</ol>
+<h4><span>步驟 8：保存與分享</span></h4>
+<ol>
+<li>
+<p><strong>保存世界檔案</strong>：</p>
+<ul>
+<li>在 Webots 中，選擇<span> </span><code inline="">File</code><span> </span>&gt;<span> </span><code inline="">Save</code><span> </span>來保存你的<span> </span><code inline="">.wbt</code><span> </span>檔案。</li>
+</ul>
+</li>
+<li>
+<p><strong>分享模擬</strong>：</p>
+<ul>
+<li>你可以將<span> </span><code inline="">.wbt</code><span> </span>檔案和控制器程式（例如<span> </span><code inline="">basketball_controller.py</code>）一起分享，讓其他人可以使用這個模擬。</li>
+</ul>
+</li>
+</ol>
+<p><strong><em>6.</em></strong>希望可以手把手一步步說明該如何利用<span style="background-color: #ffff00;">圖形介面</span> menu 建立這個場景，過程中有那些要點必須特別注意？(<span style="background-color: #ccffcc;">41223118</span>)</p>
 <div>
 <div><strong>步驟 1</strong>：<strong>啟動 Webots 並創建新世界：</strong></div>
 </div>
@@ -478,8 +935,7 @@ for i in all_stud:
 </div>
 </div>
 </div>
-</div>
-<h2>task6</h2>
+</div><h2>task6</h2>
 <h1>Homework</h1>
 <p>作業 (30%)</p>
 <p>HW1 (5%): <span style="background-color: #ffff00;">建立由 Box 組成的平面四連桿機構 Webots 模擬場景</span></p>
