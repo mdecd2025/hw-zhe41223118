@@ -143,7 +143,19 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">w7 << <a href='w7.html'>Previous</a> <a href='tasks.html'>Next</a> >> tasks<br /><h1>w8</h1>
-<br />w7 << <a href='w7.html'>Previous</a> <a href='tasks.html'>Next</a> >> tasks</div>
+<p>複習webots<span> </span><a href="https://cyberbotics.com/doc/reference/solidreference">SolidReference</a><span><span> </span>節點的用法說明，用在 Joint 節點的 endPoint 欄位中，用來指向一個現有的 Solid 或靜態環境 <span style="background-color: #ffff00;">&lt;static environment&gt;</span>。通過這種方式，可以閉合機械迴圈。</span></p>
+<p><span>當指向一個 Solid 時，唯一的限制是 Solid 和 Joint 必須是某個共同上層 Solid 的下層。</span></p>
+<p>意思即是指 SolidReference 是一個引用類型，允許在 Joint 節點的 endPoint 欄位中指定某個目標。</p>
+<p>它可以指向兩種類型的對象：</p>
+<ol>
+<li>現有的 Solid：這是一個具體的實體，但這個 Solid 和 Joint 必須是某個共同上層 Solid 的下層。</li>
+<li>靜態環境 &lt;static environment&gt;：這通常指的是不動的參考框架（例如地面或固定基座）</li>
+</ol>
+<p><span>第一作法：</span></p>
+<p><span>若將 fourbar linkage 的 joint4 設置在 base link 的最右端，然後將 joint4 的 endPoint 欄位，設為 SolidReference 指向 link3，即可符合 Soild (link3) 與 Joint (joint4) 都是某個共同上層 Solid (base) 的下層。</span></p>
+<p><span>第二作法：</span></p>
+<p><span>可以將 fourbar linkage 的 joint4 設置在 link3 的末端，然後將 joint4 的 endPoint 欄位指向 <span style="background-color: #ffff00;">&lt;static environment&gt;</span>，讓 link3 的末端固定在 ground (其作用與固定在 base 節點相同)。</span></p>
+<p><span></span></p><br />w7 << <a href='w7.html'>Previous</a> <a href='tasks.html'>Next</a> >> tasks</div>
         
     <!-- footer -->
       <div class="container">
