@@ -213,7 +213,7 @@ path=%Disk%:;%path_python%;%path_git%;%path_copsim%;%path_msys2%;%path_miketex%;
 <h2>task4</h2>
 <p><span><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/de8d72a66126859139f42a25276bfa25/raw/1dd61ed37c8457f99353d5ddfd539bd27ff28a83/ag">2a分組網站與倉儲連結</a></span></p>
 <p><span><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/8ab2bde273de00d794d7d46d7540dc08/raw/8a7fdc0fc7cd89c04f5019fc620a0677f50b4fd6/bg">2b分組網站與倉儲連結</a></span></p>
-<p><span>因為上列程式已經給出兩班當時已經參與分組的學員 Github 帳號, 因此只需要從 </span><a href="https://mde.tw/list/2a.txt">https://mde.tw/list/2a.txt</a><span> 讀取學員的學號與 Github 帳號，並且在 for 迴圈中，逐一用學員的 Github 帳號相對於各班已經參與分組的學員 Github 帳號，並且列出特定學員的 Github 帳號不在前述已經參與分組的學員帳號數列中，即可列出截至當時尚未那組的學員學號。</span></p>
+<p><span>因為上列程式已經給出兩班當時已經參與分組的學員 Github 帳號，因此只需要從 </span><a href="https://mde.tw/list/2a.txt">https://mde.tw/list/2a.txt</a><span> 讀取學員的學號與 Github 帳號，並且在 for 迴圈中，逐一用學員的 Github 帳號相對於各班已經參與分組的學員 Github 帳號，並且列出特定學員的 Github 帳號不在前述已經參與分組的學員帳號數列中，即可列出截至當時尚未那組的學員學號。</span></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 甲班學員資料處理
 url = "https://mde.tw/list/2a.txt"
 data = open(url).readlines()
@@ -229,8 +229,7 @@ for i in all_stud:
     stud_github = stud[1]
     if stud_github not in a_all_members:
         print(stud_num)</pre>
-<p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/fcdf65c3206155c5cd56140e47c6c87d/raw/8a5262e66228212fbc4f862ceaf67c798c9fb54c/2a-1">2a未加入團隊學員</a></p>
-<h2>task5</h2>
+<p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/fcdf65c3206155c5cd56140e47c6c87d/raw/8a5262e66228212fbc4f862ceaf67c798c9fb54c/2a-1">2a未加入團隊學員</a></p><h2>task5</h2>
 <p><span style="background-color: #ff99cc;"><em><strong>1.</strong></em>請用繁體中文詳細說明下列<a href="https://cyberbotics.com/doc/guide/introduction-to-webots" style="background-color: #ff99cc;">資料</a></span>：(<span style="background-color: #ccffcc;">41223136<span style="background-color: #ffffff;">)</span></span></p>
 <p>Q1：什麼是Webots?</p>
 <p>Webots是一款專業的移動機器人模擬軟件，提供了3D虛擬環境，支持物理屬性設計，並且可創建不同類型的機器人(輪式、腿式、飛行)，並添加傳感器和執行器。支持單獨編程機器人以實現特定行為，提供大量模型和示例。模擬成功後，可以將程序轉移至真實的機器人，支持擴展新接口。</p>
@@ -1028,7 +1027,87 @@ for i in all_stud:
 <p class="" data-end="530" data-start="489"><code data-end="503" data-start="489">NumPad 1/3/7</code>：前視 / 側視 / 上視（搭配 Ctrl 反向）</p>
 </li>
 </ul><h2>task6</h2>
-<h1>Homework</h1>
+<p><span>利用 Solvespace 繪製的 7 段顯示器零組件檔案： </span><a href="https://mdecd2025.github.io/hw-scrum-1/downloads/score_counter.7z">score_counter.7z</a></p>
+<p><span>利用<span style="background-color: #ffff99;"> r、b、y、g 按鍵改變 7 段顯示器</span>中的 <span style="background-color: #ffff99;">f</span> 零件示範場景： </span><a href="https://mdecd2025.github.io/hw-scrum-1/downloads/7_segment_display.7z">7_segment_display.7z</a></p>
+<p><span>執行結果如下：</span></p>
+<h4>Webots Tutorial (HW3)</h4>
+<p>1. 啟動 Webots 串流模式：</p>
+<p>   使用以下指令開啟 Webots 並啟用串流伺服器：</p>
+<div>
+<div class="syntaxhighlighter py" id="highlighter_781547">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="py plain">webotsw </code><code class="py keyword">-</code><code class="py keyword">-</code><code class="py plain">stream</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>2.   <strong data-end="163" data-start="154">預設埠號：</strong><span> </span><code data-end="170" data-start="164">1234</code><br data-end="173" data-start="170"/>     使用瀏覽器連線至：</p>
+<p></p>
+<ul>
+<li class="" data-end="222" data-start="191">
+<p class="" data-end="222" data-start="193">本地端：<code data-end="220" data-start="197">http://localhost:1234</code></p>
+</li>
+<li class="" data-end="263" data-start="226">
+<p class="" data-end="263" data-start="228">遠端機器：<code data-end="263" data-start="233">http://stream_server_ip:1234</code></p>
+</li>
+</ul>
+<p><code data-end="263" data-start="233">3. <strong data-end="278" data-start="268">建議瀏覽器：</strong><br data-end="281" data-start="278"/><strong data-end="306" data-start="284">    Windows 環境下使用 Edge</strong>，相容性較佳（支援 WebGL2）</code></p>
+<p><code data-end="263" data-start="233">4. </code>顯示投籃成績（Scoreboard / 計時器）</p>
+<h4 class="" data-end="374" data-start="364"> a. 近端檢視：</h4>
+<ul data-end="442" data-start="375">
+<li class="" data-end="404" data-start="375">
+<p class="" data-end="404" data-start="377">利用 Webots<span> </span><code data-end="396" data-start="387">display</code><span> </span>元件展示數字。</p>
+</li>
+<li class="" data-end="442" data-start="405">
+<p class="" data-end="442" data-start="407"><strong data-end="414" data-start="407">限制：</strong><span> </span>僅在本機 Webots 視窗中可見，無法透過串流顯示。</p>
+</li>
+</ul>
+<h4 class="" data-end="464" data-start="444"> b. 串流顯示（7 段顯示器實作）：</h4>
+<ol data-end="795" data-start="465">
+<li class="" data-end="528" data-start="465">
+<p class="" data-end="528" data-start="468"><strong data-end="477" data-start="468">建模工具：</strong><span> </span>使用 Solvespace 繪製的 7 段顯示器模型（檔案：<code data-end="526" data-start="508">score_counter.7z</code>）。</p>
+</li>
+<li class="" data-end="625" data-start="530">
+<p class="" data-end="542" data-start="533"><strong data-end="542" data-start="533">匯入模型：</strong></p>
+<ul data-end="625" data-start="546">
+<li class="" data-end="590" data-start="546">
+<p class="" data-end="590" data-start="548">在 Webots 中插入一個<span> </span><code data-end="570" data-start="563">Solid</code><span> </span>→<span> </span><code data-end="580" data-start="573">Shape</code><span> </span>→<span> </span><code data-end="589" data-start="583">Mesh</code>。</p>
+</li>
+<li class="" data-end="625" data-start="594">
+<p class="" data-end="625" data-start="596"><code data-end="601" data-start="596">url</code><span> </span>指向各段（a ~ g）的<span> </span><code data-end="621" data-start="615">.obj</code><span> </span>檔案。</p>
+</li>
+</ul>
+</li>
+<li class="" data-end="728" data-start="627">
+<p class="" data-end="641" data-start="630"><strong data-end="641" data-start="630">變色顯示數字：</strong></p>
+<ul data-end="728" data-start="645">
+<li class="" data-end="697" data-start="645">
+<p class="" data-end="697" data-start="647">使用<span> </span><strong data-end="667" data-start="650">controller 程式</strong><span> </span>來變更 Mesh 段的顏色（開：紅色／亮；關：灰色／暗）。</p>
+</li>
+<li class="" data-end="728" data-start="701">
+<p class="" data-end="728" data-start="703">每個數字由不同段（a-g）組成，模擬數字顯示效果。</p>
+</li>
+</ul>
+</li>
+<li class="" data-end="795" data-start="730">
+<p class="" data-end="754" data-start="733"><strong data-end="754" data-start="733">使用 Supervisor 模式：</strong></p>
+<ul data-end="795" data-start="758">
+<li class="" data-end="795" data-start="758">
+<p class="" data-end="795" data-start="760">可程式化操控每個 Mesh 的外觀（顏色控制、數字變換、倒數計時等）。</p>
+</li>
+</ul>
+</li>
+</ol><h1>Homework</h1>
 <p>作業 (30%)</p>
 <p>HW1 (5%): <span style="background-color: #ffff00;">建立由 Box 組成的平面四連桿機構 Webots 模擬場景</span></p>
 <p style="padding-left: 30px;">part1:</p>

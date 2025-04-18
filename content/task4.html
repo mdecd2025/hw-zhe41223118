@@ -145,7 +145,7 @@ img.add_border {
     <div id="tipue_search_content">task3 << <a href='task3.html'>Previous</a> <a href='task5.html'>Next</a> >> task5<br /><h1>task4</h1>
 <p><span><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/de8d72a66126859139f42a25276bfa25/raw/1dd61ed37c8457f99353d5ddfd539bd27ff28a83/ag">2a分組網站與倉儲連結</a></span></p>
 <p><span><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/8ab2bde273de00d794d7d46d7540dc08/raw/8a7fdc0fc7cd89c04f5019fc620a0677f50b4fd6/bg">2b分組網站與倉儲連結</a></span></p>
-<p><span>因為上列程式已經給出兩班當時已經參與分組的學員 Github 帳號, 因此只需要從 </span><a href="https://mde.tw/list/2a.txt">https://mde.tw/list/2a.txt</a><span> 讀取學員的學號與 Github 帳號，並且在 for 迴圈中，逐一用學員的 Github 帳號相對於各班已經參與分組的學員 Github 帳號，並且列出特定學員的 Github 帳號不在前述已經參與分組的學員帳號數列中，即可列出截至當時尚未那組的學員學號。</span></p>
+<p><span>因為上列程式已經給出兩班當時已經參與分組的學員 Github 帳號，因此只需要從 </span><a href="https://mde.tw/list/2a.txt">https://mde.tw/list/2a.txt</a><span> 讀取學員的學號與 Github 帳號，並且在 for 迴圈中，逐一用學員的 Github 帳號相對於各班已經參與分組的學員 Github 帳號，並且列出特定學員的 Github 帳號不在前述已經參與分組的學員帳號數列中，即可列出截至當時尚未那組的學員學號。</span></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 甲班學員資料處理
 url = "https://mde.tw/list/2a.txt"
 data = open(url).readlines()
@@ -161,8 +161,7 @@ for i in all_stud:
     stud_github = stud[1]
     if stud_github not in a_all_members:
         print(stud_num)</pre>
-<p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/fcdf65c3206155c5cd56140e47c6c87d/raw/8a5262e66228212fbc4f862ceaf67c798c9fb54c/2a-1">2a未加入團隊學員</a></p>
-<br />task3 << <a href='task3.html'>Previous</a> <a href='task5.html'>Next</a> >> task5</div>
+<p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/fcdf65c3206155c5cd56140e47c6c87d/raw/8a5262e66228212fbc4f862ceaf67c798c9fb54c/2a-1">2a未加入團隊學員</a></p><br />task3 << <a href='task3.html'>Previous</a> <a href='task5.html'>Next</a> >> task5</div>
         
     <!-- footer -->
       <div class="container">

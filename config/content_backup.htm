@@ -213,7 +213,7 @@ path=%Disk%:;%path_python%;%path_git%;%path_copsim%;%path_msys2%;%path_miketex%;
 <h2>task4</h2>
 <p><span><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/de8d72a66126859139f42a25276bfa25/raw/1dd61ed37c8457f99353d5ddfd539bd27ff28a83/ag">2a分組網站與倉儲連結</a></span></p>
 <p><span><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/8ab2bde273de00d794d7d46d7540dc08/raw/8a7fdc0fc7cd89c04f5019fc620a0677f50b4fd6/bg">2b分組網站與倉儲連結</a></span></p>
-<p><span>因為上列程式已經給出兩班當時已經參與分組的學員 Github 帳號, 因此只需要從 </span><a href="https://mde.tw/list/2a.txt">https://mde.tw/list/2a.txt</a><span> 讀取學員的學號與 Github 帳號，並且在 for 迴圈中，逐一用學員的 Github 帳號相對於各班已經參與分組的學員 Github 帳號，並且列出特定學員的 Github 帳號不在前述已經參與分組的學員帳號數列中，即可列出截至當時尚未那組的學員學號。</span></p>
+<p><span>因為上列程式已經給出兩班當時已經參與分組的學員 Github 帳號，因此只需要從 </span><a href="https://mde.tw/list/2a.txt">https://mde.tw/list/2a.txt</a><span> 讀取學員的學號與 Github 帳號，並且在 for 迴圈中，逐一用學員的 Github 帳號相對於各班已經參與分組的學員 Github 帳號，並且列出特定學員的 Github 帳號不在前述已經參與分組的學員帳號數列中，即可列出截至當時尚未那組的學員學號。</span></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 甲班學員資料處理
 url = "https://mde.tw/list/2a.txt"
 data = open(url).readlines()
@@ -229,8 +229,7 @@ for i in all_stud:
     stud_github = stud[1]
     if stud_github not in a_all_members:
         print(stud_num)</pre>
-<p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/fcdf65c3206155c5cd56140e47c6c87d/raw/8a5262e66228212fbc4f862ceaf67c798c9fb54c/2a-1">2a未加入團隊學員</a></p>
-<h2>task5</h2>
+<p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/fcdf65c3206155c5cd56140e47c6c87d/raw/8a5262e66228212fbc4f862ceaf67c798c9fb54c/2a-1">2a未加入團隊學員</a></p><h2>task5</h2>
 <p><span style="background-color: #ff99cc;"><em><strong>1.</strong></em>請用繁體中文詳細說明下列<a href="https://cyberbotics.com/doc/guide/introduction-to-webots" style="background-color: #ff99cc;">資料</a></span>：(<span style="background-color: #ccffcc;">41223136<span style="background-color: #ffffff;">)</span></span></p>
 <p>Q1：什麼是Webots?</p>
 <p>Webots是一款專業的移動機器人模擬軟件，提供了3D虛擬環境，支持物理屬性設計，並且可創建不同類型的機器人(輪式、腿式、飛行)，並添加傳感器和執行器。支持單獨編程機器人以實現特定行為，提供大量模型和示例。模擬成功後，可以將程序轉移至真實的機器人，支持擴展新接口。</p>
@@ -1060,7 +1059,11 @@ for i in all_stud:
 <p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 HW1 - 學員學號</p>
 <p>題目要求尺寸：<span>利用 box 幾何外形節點建立平面四連桿機構的模擬場景，要求地面<span style="background-color: #ffff00;">固定桿長度 1m</span>，<span style="background-color: #ffff00;">寬高各為 0.1m</span>，<span style="background-color: #ffff00;">第一桿長度 0.4m</span>，<span style="background-color: #ffff00;">第二桿長度 0.6m</span>，<span style="background-color: #ffff00;">第三桿長度 0.9m</span>。</span></p>
 <p><span><a href="https://nfuedu-my.sharepoint.com/:u:/g/personal/41223118_nfu_edu_tw/ERQte6pGh7lGsShWUkh0nigBK6ikf2hC_PZrVHM2kcFrmg?e=5VPxuk">41223118-fourbar_box-w8.7z</a></span></p>
-<p><span>這個版本還存在問題，三個webost檔案中link4腳還不能與base銜接。</span></p><h2>HW2</h2>
+<p><span>這個版本還存在問題，三個webost檔案中link4腳還不能與base銜接。</span></p>
+<hr/>
+<p>理解問題所在後，修正版本及影片：</p>
+<p><a href="https://nfuedu-my.sharepoint.com/:u:/g/personal/41223118_nfu_edu_tw/EZoglObR_iFOtUABhL-XmdMBSbcHfTTvY_YISISjiXOkxw?e=h1EOFA">41223118-fourbar_box-w9.7z</a></p>
+<p></p><h2>HW2</h2>
 <p>HW2 (5%): <span style="background-color: #ffff00;">建立由 CAD 繪製零件組成的平面四連桿機構 Webots 模擬場景</span></p>
 <p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 HW2 - 學員學號</p>
 <p></p>
