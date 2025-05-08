@@ -150,7 +150,7 @@ path=%Disk%:;%path_python%;%path_git%;%path_copsim%;%path_msys2%;%path_miketex%;
 <p>本週因連假而未上課，將當週上課班級上課內容整理至此。</p>
 <p>建立 fourbar box 過程中的要點：</p>
 <ol style="list-style-type: lower-roman;">
-<li>各 Solid - Shape - geometry 在建立 open chain 機構時，可以在尚未設定 physics 之前單軸運轉，但 Webots 牽涉需要模擬 closed chain 機構時，各 Solid - Shape -geometry 則必須設定 boundingObject 與 physics 才能透過 solidReference 進行 dynamics 聯立運算，亦即 Webots 在模擬封閉機構時，只能處理 Dynamics 模擬。                                                                                                                 <span style="background-color: #ccffcc;">(原因是其模擬運算是從 <a href="https://www.ode.org/" style="background-color: #ccffcc;">ODE</a> 動力程式庫修改而來，並沒有附加 closed chain 的 kinematics 運算)</span></li>
+<li>各 Solid - Shape - geometry 在建立 open chain 機構時，可以在尚未設定 physics 之前單軸運轉，但 Webots 牽涉需要模擬 closed chain 機構時，各 Solid - Shape -geometry 則必須設定 boundingObject 與 physics 才能透過 solidReference 進行 dynamics 聯立運算，亦即 Webots 在模擬封閉機構時，只能處理 Dynamics 模擬。<span style="background-color: #ccffcc;">(原因是其模擬運算是從 <a href="https://www.ode.org/" style="background-color: #ccffcc;">ODE</a> 動力程式庫修改而來，並沒有附加 closed chain 的 kinematics 運算)</span></li>
 <li>當個別 link 採 box 建立時，為了要符合其 kinematics 運動約束條件，各桿件的起始條件必須滿足 fourbar linkage 的約束條件，因此只有 link1 旋轉 90 度，可以在 x 與 y 軸同動的情況下無需透 pose 進行局部座標轉換, 但 link2 與 link3 在納入 Shape 之前必須立 pose 節點置入額外的座標轉換。</li>
 <li>各 link 的 boundingObject 欄位，可以透過其 link Shape 採 USE 的方式重用。</li>
 <li>最後 joint4 的旋轉中心則透過 solidReference 與 link3 的端點座標重合，才能完成 closed chain 的動力約束條件模擬。</li>
@@ -213,7 +213,8 @@ path=%Disk%:;%path_python%;%path_git%;%path_copsim%;%path_msys2%;%path_miketex%;
 <p><span><strong><em>13.</em></strong> 投籃機與籃框的移動裝置則可採用 </span><a href="https://www.cyberbotics.com/doc/guide/youbot?version=cyberbotics:R2019a-rev1#!">Kuka 套件項下</a><span>的<span> </span></span><a href="https://mde.tw/cd2025/content/Youbot_cart.html">Youbot</a><span><span> </span></span><a href="https://en.wikipedia.org/wiki/Mecanum_wheel">Mecanum</a><span><span> </span>輪底座</span></p>
 <p><strong><em>14.</em></strong> <span style="background-color: #ccffcc;">(參考)</span> 對於 webotsw --stream 在近端啟動伺服器的部分尚未完成, 目前僅能透過官方網站擷取 Webotsview.js, 具體問題在於 webots 串流伺服器啟動後, 不接受跨網域擷取 Webotsview.js, 亦即必須處理伺服器間的 Access-Control-Allow-Origin（CORS）議題. 自行<span> </span><a href="https://github.com/cyberbotics/webots/wiki/Windows-installation/">build webotsw.exe</a><span> </span>應該就可以克服此一問題.</p>
 <p><strong><em>15.</em> </strong><span style="background-color: #ccffcc;">(參考)</span> 另外 Webots stream server 目前僅接受多 client 檢視, 而不支援跨 server 執行 controller 指令, 若要在系統模擬架構下進行多人同步協同 (類似 CoppeliaSim 的串流控制), 則必須自行處理.</p><h2>w11</h2>
-<p>webots 小組協同模擬及 fourbar_box複習</p><h1>Tutorial</h1>
+<p>webots 小組協同模擬及 fourbar_box複習</p>
+<h2>w12</h2><h1>Tutorial</h1>
 <h4 class="anchor-header" id="addanepuckrobot" name="add-an-e-puck-robot"><span>電子冰球機器人：</span></h4>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/KVXbz-2oAOs?si=ob2qLG6NO24k9Wbk" title="YouTube video player" width="560"></iframe></p>
 <p><code><span style="background-color: #ffff99;">RectangleArena</span> </code><span><span>場景樹中的節點，打開節點並顯示其字段。 <span style="background-color: #ccffcc;">(雙點擊各節點可以帶出其特定的欄位)</span></span></span></p>

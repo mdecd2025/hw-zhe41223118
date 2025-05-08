@@ -213,7 +213,8 @@ path=%Disk%:;%path_python%;%path_git%;%path_copsim%;%path_msys2%;%path_miketex%;
 <p><span><strong><em>13.</em></strong> 投籃機與籃框的移動裝置則可採用 </span><a href="https://www.cyberbotics.com/doc/guide/youbot?version=cyberbotics:R2019a-rev1#!">Kuka 套件項下</a><span>的<span> </span></span><a href="https://mde.tw/cd2025/content/Youbot_cart.html">Youbot</a><span><span> </span></span><a href="https://en.wikipedia.org/wiki/Mecanum_wheel">Mecanum</a><span><span> </span>輪底座</span></p>
 <p><strong><em>14.</em></strong> <span style="background-color: #ccffcc;">(參考)</span> 對於 webotsw --stream 在近端啟動伺服器的部分尚未完成, 目前僅能透過官方網站擷取 Webotsview.js, 具體問題在於 webots 串流伺服器啟動後, 不接受跨網域擷取 Webotsview.js, 亦即必須處理伺服器間的 Access-Control-Allow-Origin（CORS）議題. 自行<span> </span><a href="https://github.com/cyberbotics/webots/wiki/Windows-installation/">build webotsw.exe</a><span> </span>應該就可以克服此一問題.</p>
 <p><strong><em>15.</em> </strong><span style="background-color: #ccffcc;">(參考)</span> 另外 Webots stream server 目前僅接受多 client 檢視, 而不支援跨 server 執行 controller 指令, 若要在系統模擬架構下進行多人同步協同 (類似 CoppeliaSim 的串流控制), 則必須自行處理.</p><h2>w11</h2>
-<p>webots 小組協同模擬及 fourbar_box複習</p><h1>Tutorial</h1>
+<p>webots 小組協同模擬及 fourbar_box複習</p>
+<h2>w12</h2><h1>Tutorial</h1>
 <h4 class="anchor-header" id="addanepuckrobot" name="add-an-e-puck-robot"><span>電子冰球機器人：</span></h4>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/KVXbz-2oAOs?si=ob2qLG6NO24k9Wbk" title="YouTube video player" width="560"></iframe></p>
 <p><code><span style="background-color: #ffff99;">RectangleArena</span> </code><span><span>場景樹中的節點，打開節點並顯示其字段。 <span style="background-color: #ccffcc;">(雙點擊各節點可以帶出其特定的欄位)</span></span></span></p>
@@ -1230,9 +1231,15 @@ for i in all_stud:
 <li>分配學員負責利用 Webots 建立機電系統模擬場景, 並利用 Python 程式進行控制, 過程中必須將建構過程拍成帶有說明字幕的影片上傳至分組網頁.</li>
 </ol>
 <h2>Exam1</h2>
-<p>Exam1 (10%): 建立 Webots 基本物件模擬場景</p>
-<p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 Exam1 - 學員學號</p>
-<h2>Exam2</h2>
+<p>Exam1 (10%): <span>直接利用 Webots 中的 box 節點建立以下四連桿機構的運動模擬</span></p>
+<p>題目：建立<span><span style="background-color: #ffff99;">紅色連桿為主動</span>旋轉，<span style="background-color: #ffff99;">旋轉速度設為 1.0 rad/s</span>，紅色連桿長度為 <span style="background-color: #ffff99;">0.4m</span>，綠色連桿長度為 <span style="background-color: #ffff99;">0.6m</span> (在位於桿件中央<span style="background-color: #ffff99;">延伸一與基座長桿重疊的短桿</span>，長度為 <span style="background-color: #ffff99;">0.3m</span>)，藍色連桿長度為 <span style="background-color: #ffff99;">0.9m</span>，紅色連桿與藍色連桿<span style="background-color: #ffff99;">距離 1m</span>，連桿機構。</span></p>
+<p><span>要求1.：利用 Solvespace 繪製當紅色連桿旋轉角度為<span style="background-color: #ffff99;">個人學號最後兩碼</span> (單位為 degree) 的線架構圖，並將此角度作為四連桿的起始旋轉角度。</span></p>
+<p><span>要求2.：操作影片標題：<span style="background-color: #ffff99;">國立虎尾科技大學 - 機械設計工程系 - cd2025 Exam1 - 學員學號</span>，回傳至指定表單，並在個人作業倉儲中以 Exam1 頁面紀錄相關過程與心得。</span></p>
+<hr/>
+<p>檔案：</p>
+<p>影片：</p>
+<p></p>
+<p>心得：</p><h2>Exam2</h2>
 <p>Exam2 (10%): 利用 CAD 零組件建立模擬場景</p>
 <p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 Exam2 - 學員學號</p>
 <h2>Exam3</h2>
