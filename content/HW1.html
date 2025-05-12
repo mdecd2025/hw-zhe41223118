@@ -150,9 +150,16 @@ img.add_border {
 <p><span><a href="https://nfuedu-my.sharepoint.com/:u:/g/personal/41223118_nfu_edu_tw/ERQte6pGh7lGsShWUkh0nigBK6ikf2hC_PZrVHM2kcFrmg?e=5VPxuk">41223118-fourbar_box-w8.7z</a></span></p>
 <p><span>這個版本還存在問題，三個webost檔案中link4腳還不能與base銜接。</span></p>
 <hr/>
-<p>理解問題所在後，修正版本及影片：</p>
+<p>理解問題所在後，修正版本檔案及影片：</p>
 <p><a href="https://nfuedu-my.sharepoint.com/:u:/g/personal/41223118_nfu_edu_tw/EZoglObR_iFOtUABhL-XmdMBSbcHfTTvY_YISISjiXOkxw?e=h1EOFA">41223118-fourbar_box-w9.7z</a></p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/XunWtvQ2Yc0?si=zD2d2jbrkSdiFce4" title="YouTube video player" width="560"></iframe></p><br />Homework << <a href='Homework.html'>Previous</a> <a href='HW2.html'>Next</a> >> HW2</div>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/XunWtvQ2Yc0?si=zD2d2jbrkSdiFce4" title="YouTube video player" width="560"></iframe></p>
+<p>心得：</p>
+<p>總的來說這個應該是初次操作webots來最難的題目，我個人認為的難點：</p>
+<ol>
+<li>需了解自己在設計時叫出的box其最後節點位置和其旋轉的rad方向</li>
+<li>在連接joint-link的節點問題時須清楚理解其是相對指向於誰的</li>
+</ol>
+<p>在製作過程中其實也有一個疑問就是問甚麼不能就joint1-4這樣的順序直接銜接，為什麼一定要最後joint4參照指向link3，最後與導師討論後得知是可行的，只要在最後將joint4的參照選擇指向<span style="background-color: #ffff99;">static_environment<span style="background-color: #ffffff;">，這個特殊定義值。</span></span></p><br />Homework << <a href='Homework.html'>Previous</a> <a href='HW2.html'>Next</a> >> HW2</div>
         
     <!-- footer -->
       <div class="container">
