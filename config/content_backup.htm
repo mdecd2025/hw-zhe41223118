@@ -1256,10 +1256,14 @@ for i in all_stud:
 <p><span>要求1.：利用 Solvespace 繪製當紅色連桿旋轉角度為<span style="background-color: #ffff99;">個人學號最後兩碼</span> (單位為 degree) 的線架構圖，並將此角度作為四連桿的起始旋轉角度。</span></p>
 <p><span>要求2.：操作影片標題：<span style="background-color: #ffff99;">國立虎尾科技大學 - 機械設計工程系 - cd2025 Exam1 - 學員學號</span>，回傳至指定表單，並在個人作業倉儲中以 Exam1 頁面紀錄相關過程與心得。</span></p>
 <hr/>
-<p>檔案：<a href="https://nfuedu-my.sharepoint.com/:u:/g/personal/41223118_nfu_edu_tw/EViaQrn8m8NHt4pbn1iHoiIBDs8CgWrMpizQvZk3u8gNxw?e=LEKcSv">41223118-Exam1.7z</a></p>
+<p>檔案：</p>
+<p><a href="https://nfuedu-my.sharepoint.com/:u:/g/personal/41223118_nfu_edu_tw/EViaQrn8m8NHt4pbn1iHoiIBDs8CgWrMpizQvZk3u8gNxw?e=LEKcSv">41223118-Exam1.7z</a></p>
+<p><a href="https://nfuedu-my.sharepoint.com/:u:/g/personal/41223118_nfu_edu_tw/EXeXWCrvsTBJjsojBeNy3HoBD4SjndnpOZ3pPa7njzMiiw?e=1qbF0b">41223118-Exam1-w13.7z</a></p>
 <p>影片：</p>
-<p></p>
-<p>心得：有了HW1的練習經驗，題目也說明了可以利用<span><span style="background-color: #ffff99;">Solvespace</span>等繪圖軟體來事先繪製好連桿後，在<a href="https://mdecd2025.github.io/hw-scrum-1/content/w7.html">w7</a>週提到的利用程式切割好配合Blend來在webots中一一組立，好處是甚麼，就是不用再像HW1那樣一個個建立還要去算其的角度和在事先繪製好的立體圖上也可回到繪製的草圖上輕鬆找出每個節點位置<span style="background-color: #ccffcc;">(只要繪製時有定位好原點的話基本上就是依坐標系去填寫節點位置)</span>，總體來說HW1雖然真的難了點，但能理解HW1的話，再來做Exam1甚至Exam2，都可以很得心順手。</span></p><h2>Exam2</h2>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/wbse4ASSr1w?si=XXRXeLZp2PleOEQ4" title="YouTube video player" width="560"></iframe></p>
+<p>心得：有了HW1的練習經驗，題目也說明了可以利用<span><span style="background-color: #ffff99;">Solvespace</span>等繪圖軟體來事先繪製好連桿後，在<a href="https://mdecd2025.github.io/hw-scrum-1/content/w7.html">w7</a>週提到的利用程式切割好配合Blend來在webots中一一組立，好處是甚麼，就是不用再像HW1那樣一個個建立還要去算其的角度和在事先繪製好的立體圖上也可回到繪製的草圖上輕鬆找出每個節點位置<span style="background-color: #ccffcc;">(只要繪製時有定位好原點的話基本上就是依坐標系去填寫節點位置)</span>，總體來說HW1雖然真的難了點，但能理解HW1的話，再來做Exam1甚至Exam2，都可以很得心順手。</span></p>
+<hr/>
+<p>以上心得為錯誤理解題目要求後寫下，在後續檢查時發現是需配合<span><span style="background-color: #ffff00;">Solvespace</span>來得知個人學號角度位置去製作Exam1，在最開始時是真的以為是用跟HW2相同方式去組合，但在過程發現問題，就是因為Exam1是要求在內部利用box組合成要求四連桿，在過程中我們就利用了<span style="background-color: #ffff00;">pose</span>移動了物件使原點有所誤差了，所以如果再照者<span style="background-color: #ffff00;">Solvespace</span>上所繪製的示意圖連桿來找軸的點位座標是不可行，而真正軸向點位其實也已經在設定角度時將XY軸原點方向做了修正，只需在設定所需軸位距離原軸位的<span style="background-color: #ffff00;">桿件長度</span>即可。</span></p><h2>Exam2</h2>
 <p>Exam2 (10%): 利用 CAD 零組件建立模擬場景</p>
 <p><span>自行選擇 CAD 套件繪製平面四連桿機構，之後轉入 Webots 後建立<span style="background-color: #ffff99;">以短桿轉速 1 rad/s 旋轉</span>的動態模擬系統</span></p>
 <p><span><span style="background-color: #ffff99;">左側最短桿</span>為<span style="background-color: #ffff99;">主動旋轉</span>，長度請<span style="background-color: #ffff99;">依照個人學號的最後兩碼</span>作為依據，設為 1.xx m，其餘自訂，主動桿的<span style="background-color: #ffff99;">起始旋轉角度</span> angle，也請以個人學號的<span style="background-color: #ffff99;">最後兩碼</span>作為依據，單位為 degree。</span></p>
@@ -1287,6 +1291,19 @@ for i in all_stud:
 <p>檔案：</p>
 <p><a href="https://nfuedu-my.sharepoint.com/:u:/g/personal/41223118_nfu_edu_tw/EVHiE3UDjbhMuxhZHIptdWQBePd6wxOqVx-yIC_Ex731wg?e=mCY9aK">41223118-Exam3-1.7z</a></p>
 <p>影片：</p>
+<p><em><strong>Exam3-1</strong></em></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/7FDH348GOeQ?si=VH-PXb-8Ard09ubK" title="YouTube video player" width="560"></iframe></p>
+<p>因紀錄時是有組員配合操作的，所以客戶端操作畫面為，組員 <a href="https://mdecd2025.github.io/hw-41223136/content/Exam3.html">41223136</a> 操作並錄製其<a href="https://www.youtube.com/watch?v=mDXOp5UmKKI">影片</a>，以下是該組員為伺服器端起動，作為客戶端連接至該伺服器IPV6-過程影片：</p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/MnX5IC9gCmI?si=RK7C8K6Q975UtnPp" title="YouTube video player" width="560"></iframe></p>
+<hr/>
+<p><em><strong>Exam3-2 </strong></em></p>
+<p></p>
+<p></p>
+<p></p>
+<hr/>
+<p><strong><em>Exam3-3</em></strong></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/icS0fJOZO1c?si=ivDXsqdVzmZ9z8Hc" title="YouTube video player" width="560"></iframe></p>
+<p>個人為伺服器端，參與此次串流組員有: <a href="https://mdecd2025.github.io/hw-Spirit0224/content/Exam3.html">41223122</a>(<a href='/get_page/Exam3/&lt;iframe width="560" height="315" src="https:/www.youtube.com/embed/fduks6D0WwU?si=ByQrq7qFCYu4J_o2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;'>影片</a>)、<a href="https://mdecd2025.github.io/hw-yuhao-08/content/Exam3.html">41223131</a>、<a href="https://mdecd2025.github.io/hw-41223136/content/Exam3.html">41223136</a>(<a href='/get_page/Exam3/&lt;iframe width="560" height="315" src="https:/www.youtube.com/embed/DuSp3opK4tI?si=4DbT6gUdUYr1kNjv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;'>影片</a>)</p>
 <p>心得：</p><h1>Final</h1>
 <p><span>期末協同專案執行過程影片、簡報與 PDf 報告檔案 (六人一組) (30%)</span></p>
 <p><span>題目: <span style="background-color: #ccffcc;">Webots 動態投籃模擬系統的協同設計</span></span></p>
