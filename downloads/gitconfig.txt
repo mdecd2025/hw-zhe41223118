@@ -1,0 +1,11 @@
+[safe]
+	directory = *
+[user]
+	email = your
+	name = your
+[credential "helperselector"]
+	selected = manager
+[http]
+    proxy = "http://p4.cycu.org:3128"
+[credential "http://p4.cycu.org:3128"]
+	provider = generic
