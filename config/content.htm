@@ -1255,7 +1255,18 @@ for i in all_stud:
 <li>分配學員負責利用 NX2312 建立系統零組件, 過程中必須將所建構之零組件檔案與繪圖過程影片上傳至分組網頁.</li>
 <li>分配學員負責利用 Webots 建立機電系統模擬場景, 並利用 Python 程式進行控制, 過程中必須將建構過程拍成帶有說明字幕的影片上傳至分組網頁.</li>
 </ol>
-<h2>Exam1</h2>
+<hr/>
+<p>需注意準備內容：</p>
+<p><strong><em>1.</em></strong> 可攜啟動 .bat 需修改為可執行webots內容</p>
+<p><a href="/downloads/start_webots-2023b.txt">start_webots-2023b.bat</a></p>
+<p><a href="/downloads/start_webots-2025a.txt">start_webots-2025a.bat</a></p>
+<p><strong><em>2.</em></strong> 製作Exam3 時是否有在自己的可攜程式(python)內下載串流webots程式庫</p>
+<p><span><span style="background-color: #ffff99;">pip install keyboard</span> (鍵盤)</span></p>
+<p><span style="background-color: #ffff99;">pip install websocket-server</span> (伺服器)</p>
+<p><span style="background-color: #ffff99;">pip install websocket-client</span> (客戶端)</p>
+<p>(開啟串流： <span style="background-color: #ccffcc;">webotsw --stream</span> )</p>
+<p><strong><em>3.</em></strong> Exam2 <a href="/downloads/stl-obj.txt">切割程式</a>時python 所需程式庫</p>
+<p><span style="background-color: #ffff99;">pip install numpy</span></p><h2>Exam1</h2>
 <p>Exam1 (10%): <span>直接利用 Webots 中的 box 節點建立以下四連桿機構的運動模擬</span></p>
 <p>題目：建立<span><span style="background-color: #ffff99;">紅色連桿為主動</span>旋轉，<span style="background-color: #ffff99;">旋轉速度設為 1.0 rad/s</span>，紅色連桿長度為 <span style="background-color: #ffff99;">0.4m</span>，綠色連桿長度為 <span style="background-color: #ffff99;">0.6m</span> (在位於桿件中央<span style="background-color: #ffff99;">延伸一與基座長桿重疊的短桿</span>，長度為 <span style="background-color: #ffff99;">0.3m</span>)，藍色連桿長度為 <span style="background-color: #ffff99;">0.9m</span>，紅色連桿與藍色連桿<span style="background-color: #ffff99;">距離 1m</span>，連桿機構。</span></p>
 <p><span>要求1.：利用 Solvespace 繪製當紅色連桿旋轉角度為<span style="background-color: #ffff99;">個人學號最後兩碼</span> (單位為 degree) 的線架構圖，並將此角度作為四連桿的起始旋轉角度。</span></p>
